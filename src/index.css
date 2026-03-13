@@ -18,7 +18,7 @@
 @layer base {
   body {
     @apply bg-y2k-bg text-white font-sans selection:bg-y2k-yellow selection:text-y2k-bg;
-    background: url('src/img/bg_improvised.png') center/cover fixed;
+    background: url('/img/bg_improvised.png') center/cover fixed;
     pointer-events: auto;
   }
 
