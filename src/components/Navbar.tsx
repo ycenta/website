@@ -49,7 +49,7 @@ export const Navbar = () => {
         <a href="https://twitch.tv/ludokino" target="_blank" rel="noreferrer" className="text-y2k-magenta hover:scale-110 transition-transform">
           <Twitch size={20} />
         </a>
-        <a href="https://youtube.com/@ludokino" target="_blank" rel="noreferrer" className="text-y2k-cyan hover:scale-110 transition-transform">
+        <a href="https://www.youtube.com/@LDKino" target="_blank" rel="noreferrer" className="text-y2k-cyan hover:scale-110 transition-transform">
           <Youtube size={20} />
         </a>
       </div>

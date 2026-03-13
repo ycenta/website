@@ -40,15 +40,15 @@ export const Home = () => {
 
           <Y2KWindow title="QUICK LINKS">
             <div className="grid grid-cols-2 gap-4">
-              <a href="#" className="flex flex-col items-center gap-2 p-4 border border-y2k-border hover:bg-y2k-border transition-colors group">
+              <a href="https://www.youtube.com/@ldkino" target='_blank' className="flex flex-col items-center gap-2 p-4 border border-y2k-border hover:bg-y2k-border transition-colors group">
                 <Youtube className="text-red-500 group-hover:scale-110 transition-transform" size={32} />
                 <span className="font-pixel text-sm">YouTube</span>
               </a>
-              <a href="#" className="flex flex-col items-center gap-2 p-4 border border-y2k-border hover:bg-y2k-border transition-colors group">
+              <a href="https://www.twitch.tv/ludokino" target='_blank' className="flex flex-col items-center gap-2 p-4 border border-y2k-border hover:bg-y2k-border transition-colors group">
                 <Twitch className="text-purple-500 group-hover:scale-110 transition-transform" size={32} />
                 <span className="font-pixel text-sm">Twitch</span>
               </a>
-              <a href="#" className="flex flex-col items-center gap-2 p-4 border border-y2k-border hover:bg-y2k-border transition-colors group">
+              <a href="https://bsky.app/profile/ludokino.net" target='_blank' className="flex flex-col items-center gap-2 p-4 border border-y2k-border hover:bg-y2k-border transition-colors group">
                 <svg
                   viewBox="0 0 24 24"
                   width="32"
@@ -61,11 +61,11 @@ export const Home = () => {
                 </svg>
                 <span className="font-pixel text-sm">Bluesky</span>
               </a>
-              <a href="#" className="flex flex-col items-center gap-2 p-4 border border-y2k-border hover:bg-y2k-border transition-colors group">
+              <a href="https://www.instagram.com/ludokino_/" target='_blank' className="flex flex-col items-center gap-2 p-4 border border-y2k-border hover:bg-y2k-border transition-colors group">
                 <Instagram className="text-pink-500 group-hover:scale-110 transition-transform" size={32} />
                 <span className="font-pixel text-sm">Instagram</span>
               </a>
-              <a href="#" className="flex flex-col items-center gap-2 p-4 border border-y2k-border hover:bg-y2k-border transition-colors group">
+              <a href="https://www.tiktok.com/@ludokino" target='_blank' className="flex flex-col items-center gap-2 p-4 border border-y2k-border hover:bg-y2k-border transition-colors group">
                 <svg
                   viewBox="0 0 24 24"
                   width="32"
@@ -78,7 +78,7 @@ export const Home = () => {
                 </svg>
                 <span className="font-pixel text-sm">TikTok</span>
               </a>
-              <a href="#" className="flex flex-col items-center gap-2 p-4 border border-y2k-border hover:bg-y2k-border transition-colors group">
+              <a href="https://x.com/ludokino" target='_blank' className="flex flex-col items-center gap-2 p-4 border border-y2k-border hover:bg-y2k-border transition-colors group">
                 <svg
                   viewBox="0 0 24 24"
                   width="32"
