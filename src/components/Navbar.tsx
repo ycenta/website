@@ -36,7 +36,8 @@ export const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 w-full bg-y2k-window border-b-2 border-y2k-border flex items-center overflow-x-auto no-scrollbar">
       <div className="flex items-center border-r-2 border-y2k-border px-4 py-2 bg-y2k-border">
-        <span className="font-pixel text-2xl text-y2k-green font-bold">LUDOKINO</span>
+        {/* Replace with logo */}
+        <img src="src/img/logosite.png" alt="Ludokino Logo" className="h-8" />
       </div>
       <div className="flex flex-1">
         <NavItem to="/" icon={Home}>Home</NavItem>

@@ -2,7 +2,8 @@ import React from 'react';
 import { Y2KWindow } from '../components/Y2KWindow';
 import { BLOG_POSTS, SHOWS } from '../constants';
 import { Link } from 'react-router-dom';
-import { Twitch, Youtube, MessageSquare, Twitter, Instagram, Send } from 'lucide-react';
+import { Twitch, Youtube, MessageSquare, Twitter, Instagram } from 'lucide-react';
+import { siBluesky } from 'simple-icons';
 
 export const Home = () => {
   return (
@@ -47,7 +48,16 @@ export const Home = () => {
                 <span className="font-pixel text-sm">Twitch</span>
               </a>
               <a href="#" className="flex flex-col items-center gap-2 p-4 border border-y2k-border hover:bg-y2k-border transition-colors group">
-                <Send className="text-blue-400 group-hover:scale-110 transition-transform" size={32} />
+                <svg
+                  viewBox="0 0 24 24"
+                  width="32"
+                  height="32"
+                  fill="currentColor"
+                  aria-label="Bluesky"
+                  className="text-blue-400 group-hover:scale-110 transition-transform"
+                >
+                  <path d={siBluesky.path} />
+                </svg>
                 <span className="font-pixel text-sm">Bluesky</span>
               </a>
               <a href="#" className="flex flex-col items-center gap-2 p-4 border border-y2k-border hover:bg-y2k-border transition-colors group">
