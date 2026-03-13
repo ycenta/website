@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
+import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { Shows } from './pages/Shows';
 import { Blog } from './pages/Blog';
@@ -25,16 +26,7 @@ export default function App() {
           </Routes>
         </main>
 
-        <footer className="bg-y2k-window border-t-2 border-y2k-border p-4 text-center z-20">
-          <div className="flex justify-center gap-8 mb-4">
-            <span className="text-[10px] font-mono opacity-40">CPU: 98%</span>
-            <span className="text-[10px] font-mono opacity-40">RAM: 512MB</span>
-            <span className="text-[10px] font-mono opacity-40">OS: LUDOKINO_OS v1.0</span>
-          </div>
-          <p className="font-pixel text-sm opacity-60">
-            &copy; 2026 LUDOKINO ASSOCIATION - TOUS DROITS RÉSERVÉS
-          </p>
-        </footer>
+        <Footer />
       </div>
     </Router>
   );
