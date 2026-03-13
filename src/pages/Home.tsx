@@ -3,8 +3,8 @@ import { Y2KWindow } from '../components/Y2KWindow';
 import { SHOWS } from '../constants';
 import { BLOG_POSTS } from '../lib/blog';
 import { Link } from 'react-router-dom';
-import { Twitch, Youtube, MessageSquare, Twitter, Instagram } from 'lucide-react';
-import { siBluesky } from 'simple-icons';
+import { Twitch, Youtube, Twitter, Instagram } from 'lucide-react';
+import { siBluesky, siTiktok, siX } from 'simple-icons';
 
 export const Home = () => {
   return (
@@ -64,6 +64,32 @@ export const Home = () => {
               <a href="#" className="flex flex-col items-center gap-2 p-4 border border-y2k-border hover:bg-y2k-border transition-colors group">
                 <Instagram className="text-pink-500 group-hover:scale-110 transition-transform" size={32} />
                 <span className="font-pixel text-sm">Instagram</span>
+              </a>
+              <a href="#" className="flex flex-col items-center gap-2 p-4 border border-y2k-border hover:bg-y2k-border transition-colors group">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="32"
+                  height="32"
+                  fill="currentColor"
+                  aria-label="TikTok"
+                  className="text-[#00f2ea] group-hover:scale-110 transition-transform"
+                >
+                  <path d={siTiktok.path} />
+                </svg>
+                <span className="font-pixel text-sm">TikTok</span>
+              </a>
+              <a href="#" className="flex flex-col items-center gap-2 p-4 border border-y2k-border hover:bg-y2k-border transition-colors group">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="32"
+                  height="32"
+                  fill="currentColor"
+                  aria-label="X"
+                  className="text-white group-hover:scale-110 transition-transform"
+                >
+                  <path d={siX.path} />
+                </svg>
+                <span className="font-pixel text-sm">X</span>
               </a>
             </div>
           </Y2KWindow>
