@@ -21,7 +21,7 @@ export const Blog = () => {
     return (
       <div className="max-w-4xl mx-auto space-y-6">
         <Link to="/blog" className="y2k-link mb-4 inline-block">← Back to index</Link>
-        <Y2KWindow title={`${post.id.toUpperCase()}.MD`}>
+        <Y2KWindow title={post.title}>
           <div className="p-4 md:p-8">
             <div className="mb-8 border-b border-y2k-border pb-6">
               <span className="text-y2k-cyan font-mono">{post.date} | {post.category}</span>
@@ -40,7 +40,7 @@ export const Blog = () => {
   return (
     <div className="space-y-8">
       <div className="text-center max-w-2xl mx-auto space-y-4">
-        <h1 className="text-5xl text-y2k-cyan">LUDOKINO_BLOG.EXE</h1>
+        <h1 className="text-5xl text-y2k-cyan">LUDOKINO BLOG</h1>
         <p className="text-xl opacity-80">
           Articles, dossiers et coulisses de la prod.
         </p>

@@ -44,7 +44,7 @@ export const About = () => {
         </Y2KWindow>
       </div>
 
-      <Y2KWindow title="THE_TEAM.EXE">
+      <Y2KWindow title="THE TEAM">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 p-4">
           {TEAM.map(member => (
             <div key={member.name} className="flex gap-4 border border-y2k-border p-4 bg-black/20">

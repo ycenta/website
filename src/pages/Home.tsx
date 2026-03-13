@@ -11,7 +11,7 @@ export const Home = () => {
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
       {/* Hero / Live Section */}
       <div className="lg:col-span-8 space-y-6">
-        <Y2KWindow title="LUDOKINO_LIVE.EXE" className="aspect-video">
+        <Y2KWindow title="LUDOKINO LIVE" className="aspect-video">
           <div className="w-full h-full bg-black flex items-center justify-center relative group">
             <iframe
               src="https://player.twitch.tv/?channel=ludokino&parent=ais-dev-j4nqh3wux33bue3q4t44kg-624404451093.europe-west2.run.app&parent=ais-pre-j4nqh3wux33bue3q4t44kg-624404451093.europe-west2.run.app"
@@ -24,7 +24,7 @@ export const Home = () => {
         </Y2KWindow>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Y2KWindow title="LATEST_NEWS.LOG">
+          <Y2KWindow title="LATEST NEWS">
             <div className="space-y-4">
               {BLOG_POSTS.slice(0, 2).map(post => (
                 <div key={post.id} className="border-b border-y2k-border pb-4 last:border-0">
@@ -38,7 +38,7 @@ export const Home = () => {
             </div>
           </Y2KWindow>
 
-          <Y2KWindow title="QUICK_LINKS.LNK">
+          <Y2KWindow title="QUICK LINKS">
             <div className="grid grid-cols-2 gap-4">
               <a href="#" className="flex flex-col items-center gap-2 p-4 border border-y2k-border hover:bg-y2k-border transition-colors group">
                 <Youtube className="text-red-500 group-hover:scale-110 transition-transform" size={32} />
@@ -72,7 +72,7 @@ export const Home = () => {
 
       {/* Sidebar */}
       <div className="lg:col-span-4 space-y-6">
-        <Y2KWindow title="SYSTEM_INFO.SYS" headerClassName="bg-y2k-magenta text-black">
+        <Y2KWindow title="SYSTEM INFO" headerClassName="bg-y2k-magenta text-black">
           <div className="space-y-4 font-mono text-sm">
             <div className="flex justify-between border-b border-white/10 pb-2">
               <span className="opacity-60">STATUS:</span>
@@ -94,7 +94,7 @@ export const Home = () => {
           </div>
         </Y2KWindow>
 
-        <Y2KWindow title="SHOWS_LIST.EXE">
+        <Y2KWindow title="SHOWS LIST">
           <div className="space-y-3">
             {SHOWS.map(show => (
               <Link 
@@ -109,7 +109,7 @@ export const Home = () => {
           </div>
         </Y2KWindow>
 
-        <Y2KWindow title="AD_SPACE.GIF" className="h-48">
+        <Y2KWindow title="AD SPACE" className="h-48">
           <div className="w-full h-full bg-y2k-border flex items-center justify-center border-2 border-dashed border-white/20">
             <span className="font-pixel text-2xl opacity-20 rotate-12">INSERT COIN</span>
           </div>

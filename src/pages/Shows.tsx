@@ -25,7 +25,7 @@ export const Shows = () => {
         {SHOWS.map(show => {
           const Icon = IconMap[show.icon] || PlayCircle;
           return (
-            <Y2KWindow key={show.id} title={`${show.id.toUpperCase()}.EXE`}>
+            <Y2KWindow key={show.id} title={show.title}>
               <div className="flex gap-6">
                 <div className="w-24 h-24 bg-y2k-border flex items-center justify-center shrink-0 border-2 border-y2k-border">
                   <Icon size={48} className="text-y2k-cyan" />
@@ -43,7 +43,7 @@ export const Shows = () => {
         })}
       </div>
 
-      <Y2KWindow title="OMNIBUS_EXPLAINED.TXT" className="max-w-3xl mx-auto">
+      <Y2KWindow title="OMNIBUS EXPLAINED" className="max-w-3xl mx-auto">
         <div className="space-y-4 text-center p-8">
           <h2 className="text-4xl text-y2k-magenta">C'EST QUOI UN OMNIBUS ?</h2>
           <p className="text-xl leading-relaxed">

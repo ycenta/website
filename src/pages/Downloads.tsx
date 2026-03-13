@@ -62,7 +62,7 @@ export const Downloads = () => {
         })}
 
         {/* Placeholder for more categories */}
-        <Y2KWindow title="COMING_SOON.SYS" className="opacity-50 grayscale">
+        <Y2KWindow title="COMING SOON" className="opacity-50 grayscale">
           <div className="flex flex-col items-center text-center space-y-4 p-2">
             <div className="p-4 bg-y2k-border rounded-full text-white/20">
               <Smile size={40} />
@@ -76,7 +76,7 @@ export const Downloads = () => {
         </Y2KWindow>
       </div>
 
-      <Y2KWindow title="WINAMP_PLAYER.EXE" className="max-w-md mx-auto">
+      <Y2KWindow title="WINAMP PLAYER" className="max-w-md mx-auto">
         <div className="bg-[#1a1a1e] p-4 border-2 border-[#333338] space-y-4">
           <div className="bg-black p-2 border border-y2k-green/30 font-mono text-xs text-y2k-green flex justify-between items-center">
             <span>02:45</span>
