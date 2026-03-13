@@ -11,9 +11,9 @@ excerpt: On a enfin un site web ! Fini le Linktree, place à la vraie experience
 C'est un grand jour pour Ludokino. On a voulu creer un espace qui nous ressemble, loin des algorithmes des réseaux sociaux.
 
 Ici vous trouverez :
-- Nos dernieres emissions
+- Nos dernières emissions
 - Un blog pour approfondir nos sujets
-- Des goodies a telecharger (skins Winamp, curseurs...)
+- Des goodies à télécharger (skins Winamp, curseurs...)
 - Les infos sur l'association
 
 Restez branchés !
