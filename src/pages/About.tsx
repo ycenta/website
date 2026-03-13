@@ -21,9 +21,9 @@ export const About = () => {
               <h2 className="text-2xl">Loi 1901</h2>
             </div>
             <p className="leading-relaxed">
-              Ludokino est une association loi 1901 à futur but lucratif. Notre objectif est de 
-              professionnaliser notre passion tout en gardant l'esprit libre et créatif des 
-              médias qui nous ont inspirés.
+              Ludokino est une association loi 1901 dédiée à la création d'un média indépendant.
+              Notre objectif est de professionnaliser notre passion tout en conservant l'esprit 
+              libre et créatif des médias qui nous ont inspirés.
             </p>
             <p className="leading-relaxed">
               Nous croyons en un média indépendant, financé par sa communauté et ses partenaires, 
