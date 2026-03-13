@@ -22,8 +22,8 @@ const NavItem = ({ to, icon: Icon, children }: { to: string, icon: any, children
     <Link 
       to={to} 
       className={cn(
-        "flex items-center gap-2 px-4 py-2 border-r-2 border-y2k-border hover:bg-y2k-border transition-all font-pixel text-xl uppercase",
-        isActive ? "bg-y2k-border text-y2k-green" : "text-white"
+        "flex items-center gap-2 px-4 py-2 border-r-2 border-gray-700 hover:bg-gray-800 transition-all font-pixel text-xl uppercase",
+        isActive ? "bg-gray-800 text-y2k-green" : "text-white"
       )}
     >
       <Icon size={20} />
@@ -34,9 +34,8 @@ const NavItem = ({ to, icon: Icon, children }: { to: string, icon: any, children
 
 export const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-50 w-full bg-y2k-window border-b-2 border-y2k-border flex items-center overflow-x-auto no-scrollbar">
-      <div className="flex items-center border-r-2 border-y2k-border px-4 py-2 bg-y2k-border">
-        {/* Replace with logo */}
+    <nav className="sticky top-0 z-50 w-full bg-gray-900 border-b-2 border-gray-700 flex items-center overflow-x-auto no-scrollbar">
+      <div className="flex items-center border-r-2 border-gray-700 px-4 py-2 bg-gray-800">
         <img src="src/img/logosite.png" alt="Ludokino Logo" className="h-8" />
       </div>
       <div className="flex flex-1">

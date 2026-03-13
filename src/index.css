@@ -6,22 +6,19 @@
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
   --font-pixel: "VT323", monospace;
 
-  --color-y2k-green: #00ff00;
-  --color-y2k-cyan: #00ffff;
-  --color-y2k-magenta: #ff00ff;
-  --color-y2k-yellow: #ffff00;
-  --color-y2k-bg: #0a0a0c;
-  --color-y2k-window: #1a1a1e;
-  --color-y2k-border: #333338;
+  --color-y2k-green: #F6E4B6;
+  --color-y2k-cyan: #C0CFE3;
+  --color-y2k-magenta: #F7C92F;
+  --color-y2k-yellow: #F7C92F;
+  --color-y2k-bg: #2a3454;
+  --color-y2k-window: #40518A;
+  --color-y2k-border: #6276a8;
 }
 
 @layer base {
   body {
-    @apply bg-y2k-bg text-white font-sans selection:bg-y2k-green selection:text-black;
-    background-image: 
-      linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
-      linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-    background-size: 100% 2px, 3px 100%;
+    @apply bg-y2k-bg text-white font-sans selection:bg-y2k-yellow selection:text-y2k-bg;
+    background: url('src/img/bg_improvised.png') center/cover fixed;
     pointer-events: auto;
   }
 
