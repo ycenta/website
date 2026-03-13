@@ -9,7 +9,7 @@ import { About } from './pages/About';
 
 export default function App() {
   return (
-    <Router basename="/ludokino">
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="min-h-screen flex flex-col relative">
         <div className="scanline"></div>
         
