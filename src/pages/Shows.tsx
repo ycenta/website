@@ -17,7 +17,7 @@ export const Shows = () => {
       <div className="text-center max-w-2xl mx-auto space-y-4">
         <h1 className="text-5xl text-y2k-green">NOS ÉMISSIONS</h1>
         <p className="text-xl opacity-80">
-          De la musique à la tech, en passant par les bails otaku, découvrez l'univers Ludokino.
+          De la musique à la tech, en passant par les tokusatsu, découvrez l'univers Ludokino.
         </p>
       </div>
 
