@@ -36,7 +36,7 @@ export const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 w-full bg-gray-900 border-b-2 border-gray-700 flex items-center overflow-x-auto no-scrollbar">
       <div className="flex items-center border-r-2 border-gray-700 px-4 py-2 bg-gray-800">
-        <img src="public/img/logosite.png" alt="Ludokino Logo" className="h-8" />
+        <img src="/img/logosite.png" alt="Ludokino Logo" className="h-8" />
       </div>
       <div className="flex flex-1">
         <NavItem to="/" icon={Home}>Home</NavItem>
