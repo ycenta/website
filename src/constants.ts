@@ -1,4 +1,4 @@
-import { Show, TeamMember, BlogPost, DownloadItem } from './types';
+import { Show, TeamMember, DownloadItem } from './types';
 
 export const SHOWS: Show[] = [,
   {
@@ -43,50 +43,6 @@ export const TEAM: TeamMember[] = [
     name: 'Wendöh',
     role: 'todo',
     bio: 'todo'
-  }
-];
-
-export const BLOG_POSTS: BlogPost[] = [
-  {
-    id: 'bienvenue-sur-le-site',
-    title: 'Bienvenue sur le nouveau portail Ludokino',
-    date: '2025-03-10',
-    author: 'Teloru',
-    category: 'News',
-    excerpt: 'On a enfin un site web ! Fini le simple Linktree, place à la vraie expérience Y2K.',
-    content: `
-# Bienvenue !
-
-C'est un grand jour pour Ludokino. On a voulu créer un espace qui nous ressemble, loin des algorithmes des réseaux sociaux.
-
-Ici vous trouverez :
-- Nos dernières émissions
-- Un blog pour approfondir nos sujets
-- Des goodies à télécharger (skins Winamp, curseurs...)
-- Les infos sur l'association
-
-Restez branchés !
-    `
-  },
-  {
-    id: 'psp-revival',
-    title: 'Pourquoi la PSP est-elle redevenue cool ?',
-    date: '2025-03-05',
-    author: 'arka-TECH Team',
-    category: 'Tech',
-    excerpt: 'Retour sur le premier épisode de arka-TECH consacré à la console portable de Sony.',
-    content: `
-# La PSP : Plus qu'une console, une icône
-
-Dans notre premier épisode de **arka-TECH**, on s'est penché sur le retour en grâce de la PlayStation Portable.
-
-## Pourquoi maintenant ?
-1. **L'esthétique Y2K** : Son design glossy et ses courbes sont pile dans la tendance actuelle.
-2. **Le Homebrew** : La scène est plus active que jamais.
-3. **L'écran** : Pour du rétro, ça reste une référence.
-
-Regardez l'épisode complet sur notre chaîne YouTube !
-    `
   }
 ];
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Y2KWindow } from '../components/Y2KWindow';
-import { BLOG_POSTS } from '../constants';
+import { BLOG_POSTS } from '../lib/blog';
 import { Link, useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Y2KWindow } from '../components/Y2KWindow';
-import { BLOG_POSTS, SHOWS } from '../constants';
+import { SHOWS } from '../constants';
+import { BLOG_POSTS } from '../lib/blog';
 import { Link } from 'react-router-dom';
 import { Twitch, Youtube, MessageSquare, Twitter, Instagram } from 'lucide-react';
 import { siBluesky } from 'simple-icons';
