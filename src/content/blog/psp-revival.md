@@ -1,7 +1,7 @@
 ---
 title: Pourquoi la PSP est-elle redevenue cool ?
 date: 2025-03-05
-author: Vincentimes
+author: VincenTimes
 category: Tech
 excerpt: Retour sur le premier episode de arka-TECH consacre a la console portable de Sony.
 ---
