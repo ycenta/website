@@ -137,7 +137,7 @@ export const Home = () => {
 
         <Y2KWindow title="AD SPACE" className="h-48">
           <div className="w-full h-full bg-y2k-border flex items-center justify-center border-2 border-dashed border-white/20">
-            <span className="font-pixel text-2xl opacity-20 rotate-12">INSERT COIN</span>
+            <span className="font-pixel text-2xl opacity-20 rotate-12">DONNE L'ARGENT</span>
           </div>
         </Y2KWindow>
       </div>
