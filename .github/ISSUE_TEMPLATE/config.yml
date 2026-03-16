@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📺 Chaîne YouTube
+    url: https://www.youtube.com/@LDKino
+    about: Regardez nos émissions
+  - name: 🐛 Reporter un bug
+    url: https://github.com/Teloru/ludokino/issues/new
+    about: Signalez un problème technique sur le site
