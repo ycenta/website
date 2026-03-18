@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const [cpu, setCpu] = useState(98);
@@ -18,10 +19,19 @@ export const Footer = () => {
       <div className="flex justify-center gap-8 mb-4">
         <span className="text-[10px] font-mono opacity-40">CPU: {cpu}%</span>
         <span className="text-[10px] font-mono opacity-40">RAM: 512MB</span>
-        <span className="text-[10px] font-mono opacity-40">OS: LUDOKINO_OS v1.0</span>
+        <span className="text-[10px] font-mono opacity-40">
+          OS: LUDOKINO_OS v1.0
+        </span>
       </div>
-      <p className="font-pixel text-sm opacity-60">
-        &copy; 2026 LUDOKINO ASSOCIATION - TOUS DROITS RÉSERVÉS
+      <p className="font-pixel text-sm opacity-60 flex items-center justify-center gap-2 flex-wrap">
+        <span>&copy; 2026 LUDOKINO ASSOCIATION - TOUS DROITS RÉSERVÉS</span>
+        <span className="opacity-40">|</span>
+        <Link
+          to="/mentions-legales"
+          className="underline decoration-dotted underline-offset-4 hover:text-y2k-cyan transition-colors"
+        >
+          Mentions légales
+        </Link>
       </p>
     </footer>
   );
