@@ -62,7 +62,7 @@ export const Shows = () => {
           </p>
           <div className="flex justify-center gap-4 pt-4">
             <div className="px-4 py-2 bg-y2k-border border border-white/20 text-xs font-mono">
-              24 FPS
+              50 FPS
             </div>
             <div className="px-4 py-2 bg-y2k-border border border-white/20 text-xs font-mono">
               1080P
