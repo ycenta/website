@@ -16,6 +16,7 @@ export const SHOWS: Show[] = [
     description:
       "L'émission musicale mensuelle qui explore les pépites sonores et les classiques oubliés.",
     icon: "Music",
+    url: "https://www.youtube.com/watch?v=qqMDV1Iv3Rw&list=PL13-SWMvlfix9XYhGjoKQdoL0Je81qD3l",
   },
   {
     id: "tokukino",
@@ -23,6 +24,7 @@ export const SHOWS: Show[] = [
     description:
       "TOKUKINO c'est notre format MENSUEL consacré au TOKUSATSU. Au programme : héros en spandex moulant, monstre géants et explosions !",
     icon: "Ghost",
+    url: "https://www.youtube.com/watch?v=_ooAVjXP6is&list=PL13-SWMvlfix9cWf78JWzGAdsksUj4MuR",
   },
   {
     id: "in-paris",
@@ -30,6 +32,7 @@ export const SHOWS: Show[] = [
     description:
       "Deux mecs cools cherchent le meilleur sandwich merguez dans Paris. Et ils parlent.",
     icon: "Sandwich",
+    url: "https://www.youtube.com/watch?v=_pTLP_cCVyA&list=PL13-SWMvlfix9dXj9wNYqGCyAQbdHmPJf",
   },
   {
     id: "arka-tech",
@@ -37,6 +40,7 @@ export const SHOWS: Show[] = [
     description:
       "Re-découvre la high-tech de la fin d'années 90/début 2000. Parce que parfois, il faut connaître le passé pour comprendre pourquoi aujourd'hui… c'est encore plus chelou.",
     icon: "Cpu",
+    url: "https://www.youtube.com/watch?v=EWIgJvGY6nE&list=PL13-SWMvlfiz2XSS9Z2N6RNfVpluRk_yT",
   },
 ];
 
