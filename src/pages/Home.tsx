@@ -14,7 +14,7 @@ export const Home = () => {
         <Y2KWindow title="LE DERNIER OMNIBUS" className="aspect-video">
           <div className="w-full h-full bg-black flex items-center justify-center relative group">
             <iframe
-              src="https://www.youtube.com/embed/K1d3xz6k2Z0?si=mBRFhXXGLe0teyjX"
+              src="https://www.youtube-nocookie.com/embed/K1d3xz6k2Z0?si=mBRFhXXGLe0teyjX"
               height="100%"
               width="100%"
               allowFullScreen
