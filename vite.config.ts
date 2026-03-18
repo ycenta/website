@@ -5,7 +5,8 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(({command}) => {
   return {
-    base: command === 'build' ? '/ludokino/' : '/',
+    // Use '/website/' for GitHub Pages, '/' for custom domain
+    base: command === 'build' ? '/website/' : '/', // Change to '/' when using ludokino.net
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
