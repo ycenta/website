@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ludokino</title>
+    <script>
+      // Store the current path and redirect to index.html
+      sessionStorage.setItem('redirectPath', location.pathname + location.search + location.hash);
+      location.replace(location.origin + '/ludokino/');
+    </script>
+  </head>
+  <body></body>
+</html>
