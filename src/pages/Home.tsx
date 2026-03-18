@@ -11,10 +11,10 @@ export const Home = () => {
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
       {/* Hero / Live Section */}
       <div className="lg:col-span-8 space-y-6">
-        <Y2KWindow title="LUDOKINO LIVE" className="aspect-video">
+        <Y2KWindow title="LE DERNIER OMNIBUS" className="aspect-video">
           <div className="w-full h-full bg-black flex items-center justify-center relative group">
             <iframe
-              src="https://player.twitch.tv/?channel=ludokino&parent=ais-dev-j4nqh3wux33bue3q4t44kg-624404451093.europe-west2.run.app&parent=ais-pre-j4nqh3wux33bue3q4t44kg-624404451093.europe-west2.run.app"
+              src="https://www.youtube.com/embed/K1d3xz6k2Z0?si=mBRFhXXGLe0teyjX"
               height="100%"
               width="100%"
               allowFullScreen
