@@ -8,7 +8,7 @@ export const SHOWS: Show[] = [
     description:
       "Le magazine mensuel de LUDOKINO, avec toutes les émissions et quelques exclusivités !",
     icon: "Film",
-    url: "https://www.youtube.com/watch?v=K1d3xz6k2Z0&list=PL13-SWMvlfiwijmK3dQ_rHY67bJj6rJ3P",
+    url: "https://www.youtube.com/playlist?list=PL13-SWMvlfiwijmK3dQ_rHY67bJj6rJ3P",
   },
   {
     id: "monthly-wave",
@@ -16,15 +16,15 @@ export const SHOWS: Show[] = [
     description:
       "L'émission musicale mensuelle qui explore les pépites sonores et les classiques oubliés.",
     icon: "Music",
-    url: "https://www.youtube.com/watch?v=qqMDV1Iv3Rw&list=PL13-SWMvlfix9XYhGjoKQdoL0Je81qD3l",
+    url: "https://www.youtube.com/playlist?list=PL13-SWMvlfix9XYhGjoKQdoL0Je81qD3l",
   },
   {
     id: "tokukino",
-    title: "Tokukino",
+    title: "TOKUKINO",
     description:
       "TOKUKINO c'est notre format MENSUEL consacré au TOKUSATSU. Au programme : héros en spandex moulant, monstre géants et explosions !",
     icon: "Ghost",
-    url: "https://www.youtube.com/watch?v=_ooAVjXP6is&list=PL13-SWMvlfix9cWf78JWzGAdsksUj4MuR",
+    url: "https://www.youtube.com/playlist?list=PL13-SWMvlfix9cWf78JWzGAdsksUj4MuR",
   },
   {
     id: "in-paris",
@@ -32,7 +32,7 @@ export const SHOWS: Show[] = [
     description:
       "Deux mecs cools cherchent le meilleur sandwich merguez dans Paris. Et ils parlent.",
     icon: "Sandwich",
-    url: "https://www.youtube.com/watch?v=_pTLP_cCVyA&list=PL13-SWMvlfix9dXj9wNYqGCyAQbdHmPJf",
+    url: "https://www.youtube.com/playlist?list=PL13-SWMvlfix9dXj9wNYqGCyAQbdHmPJf",
   },
   {
     id: "arka-tech",
@@ -40,7 +40,7 @@ export const SHOWS: Show[] = [
     description:
       "Re-découvre la high-tech de la fin d'années 90/début 2000. Parce que parfois, il faut connaître le passé pour comprendre pourquoi aujourd'hui… c'est encore plus chelou.",
     icon: "Cpu",
-    url: "https://www.youtube.com/watch?v=EWIgJvGY6nE&list=PL13-SWMvlfiz2XSS9Z2N6RNfVpluRk_yT",
+    url: "https://www.youtube.com/playlist?list=PL13-SWMvlfiz2XSS9Z2N6RNfVpluRk_yT",
   },
 ];
 
