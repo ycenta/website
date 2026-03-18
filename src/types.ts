@@ -3,6 +3,7 @@ export interface Show {
   title: string;
   description: string;
   icon: string;
+  url: string;
 }
 
 export interface TeamMember {
@@ -25,7 +26,14 @@ export interface BlogPost {
 export interface DownloadItem {
   id: string;
   title: string;
-  category: 'wallpaper' | 'avatar' | 'skin' | 'cursor' | 'ringtone' | 'smiley' | 'papertoy';
+  category:
+    | "wallpaper"
+    | "avatar"
+    | "skin"
+    | "cursor"
+    | "ringtone"
+    | "smiley"
+    | "papertoy";
   description: string;
   url: string;
 }

@@ -1,14 +1,14 @@
-import React from 'react';
-import { Y2KWindow } from '../components/Y2KWindow';
-import { SHOWS } from '../constants';
-import { Music, Ghost, Cpu, Film, Sandwich, PlayCircle } from 'lucide-react';
+import React from "react";
+import { Y2KWindow } from "../components/Y2KWindow";
+import { SHOWS } from "../constants";
+import { Music, Ghost, Cpu, Film, Sandwich, PlayCircle } from "lucide-react";
 
 const IconMap: Record<string, any> = {
   Music,
   Ghost,
   Cpu,
   Film,
-  Sandwich
+  Sandwich,
 };
 
 export const Shows = () => {
@@ -17,12 +17,13 @@ export const Shows = () => {
       <div className="text-center max-w-2xl mx-auto space-y-4">
         <h1 className="text-5xl text-y2k-green">NOS ÉMISSIONS</h1>
         <p className="text-xl opacity-80">
-          De la musique à la tech, en passant par les tokusatsu, découvrez l'univers Ludokino.
+          De la musique à la tech, en passant par les tokusatsu, découvrez
+          l'univers Ludokino.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {SHOWS.map(show => {
+        {SHOWS.map((show) => {
           const Icon = IconMap[show.icon] || PlayCircle;
           return (
             <Y2KWindow key={show.id} title={show.title}>
@@ -35,7 +36,14 @@ export const Shows = () => {
                   <p className="text-lg opacity-90 leading-relaxed">
                     {show.description}
                   </p>
-                  <button className="y2k-button">Voir les épisodes</button>
+                  <a
+                    href={show.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="y2k-button"
+                  >
+                    Voir les épisodes
+                  </a>
                 </div>
               </div>
             </Y2KWindow>
@@ -47,14 +55,21 @@ export const Shows = () => {
         <div className="space-y-4 text-center p-8">
           <h2 className="text-4xl text-y2k-magenta">C'EST QUOI UN OMNIBUS ?</h2>
           <p className="text-xl leading-relaxed">
-            C'est le format ultime de Ludokino. Chaque mois, nous mélangeons toutes nos émissions, 
-            nos sketchs et nos intermittences funs pour créer un montage final massif pouvant durer 
-            jusqu'à <span className="text-y2k-green font-bold">2 HEURES</span>.
+            C'est le format ultime de Ludokino. Chaque mois, nous mélangeons
+            toutes nos émissions, nos sketchs et nos intermittences funs pour
+            créer un montage final massif pouvant durer jusqu'à{" "}
+            <span className="text-y2k-green font-bold">2 HEURES</span>.
           </p>
           <div className="flex justify-center gap-4 pt-4">
-            <div className="px-4 py-2 bg-y2k-border border border-white/20 text-xs font-mono">24 FPS</div>
-            <div className="px-4 py-2 bg-y2k-border border border-white/20 text-xs font-mono">1080P</div>
-            <div className="px-4 py-2 bg-y2k-border border border-white/20 text-xs font-mono">STEREO</div>
+            <div className="px-4 py-2 bg-y2k-border border border-white/20 text-xs font-mono">
+              24 FPS
+            </div>
+            <div className="px-4 py-2 bg-y2k-border border border-white/20 text-xs font-mono">
+              1080P
+            </div>
+            <div className="px-4 py-2 bg-y2k-border border border-white/20 text-xs font-mono">
+              STEREO
+            </div>
           </div>
         </div>
       </Y2KWindow>
