@@ -19,7 +19,7 @@ export const About = () => {
 
   return (
     <div className="max-w-5xl mx-auto space-y-12">
-      <div className="text-center space-y-4">
+      <div className="page-header">
         <h1 className="text-6xl text-y2k-green">À PROPOS DE LUDOKINO</h1>
         <p className="text-xl opacity-80">
           Plus qu'un média, une association de passionnés.

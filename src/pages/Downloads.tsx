@@ -48,7 +48,7 @@ export const Downloads = () => {
 
   return (
     <div className="space-y-8">
-      <div className="text-center max-w-2xl mx-auto space-y-4">
+      <div className="page-header">
         <h1 className="text-5xl text-y2k-magenta">GOODIES & DOWNLOADS</h1>
         <p className="text-xl opacity-80">
           Customisez votre bureau et votre vie avec nos packs exclusifs. 100%

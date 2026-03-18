@@ -3,8 +3,8 @@ import { Y2KWindow } from "../components/Y2KWindow";
 
 export const Legal = () => {
   return (
-    <div className="max-w-3xl mx-auto space-y-6">
-      <div className="text-center space-y-2">
+  <div className="max-w-3xl mx-auto space-y-6">
+      <div className="page-header">
         <h1 className="text-5xl text-y2k-green">MENTIONS LÉGALES</h1>
         <p className="opacity-70">Informations légales du site Ludokino.</p>
       </div>
