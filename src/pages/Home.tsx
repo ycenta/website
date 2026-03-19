@@ -169,7 +169,7 @@ export const Home = () => {
           </div>
         </Y2KWindow>
         <Y2KWindow title="NOS ÉMISSIONS">
-          <div className="space-y-3 max-h-[475px] overflow-y-auto  -mr-2 pr-2 y2k-scrollbar">
+          <div className="space-y-3 max-h-[475px] overflow-y-auto -mr-2 pr-2 y2k-scrollbar">
             {SHOWS.map((show) => (
               <Link
                 key={show.id}
