@@ -8,7 +8,7 @@
 
   --color-y2k-green: #F6E4B6;
   --color-y2k-cyan: #C0CFE3;
-  --color-y2k-magenta: #F7C92F;
+  --color-y2k-magenta: #E91E8C;
   --color-y2k-yellow: #F7C92F;
   --color-y2k-bg: #2a3454;
   --color-y2k-window: #40518A;
@@ -41,7 +41,7 @@
   }
 
   .y2k-link {
-    @apply text-y2k-cyan hover:text-y2k-magenta transition-colors underline decoration-dotted underline-offset-4;
+    @apply text-y2k-cyan hover:text-y2k-yellow transition-colors underline decoration-dotted underline-offset-4;
   }
 
 

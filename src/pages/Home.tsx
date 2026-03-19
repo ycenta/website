@@ -3,7 +3,7 @@ import { Y2KWindow } from "../components/Y2KWindow";
 import { SHOWS } from "../constants";
 import { BLOG_POSTS } from "../lib/blog";
 import { Link } from "react-router-dom";
-import { Twitch, Youtube, Twitter, Instagram } from "lucide-react";
+import { Twitch, Youtube, Twitter, Instagram, ArrowRight } from "lucide-react";
 import { siBluesky, siTiktok, siX } from "simple-icons";
 
 export const Home = () => {
@@ -24,7 +24,7 @@ export const Home = () => {
         </Y2KWindow>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Y2KWindow title="LATEST NEWS">
+          <Y2KWindow title="DERNIERS ARTICLES">
             <div className="space-y-4">
               {BLOG_POSTS.slice(0, 2).map((post) => (
                 <div
@@ -42,17 +42,17 @@ export const Home = () => {
                     to={`/blog/${post.id}`}
                     className="y2k-link text-sm mt-2 inline-block"
                   >
-                    Read more...
+                  Lire l'article <ArrowRight size={16} className="inline-block ml-1" />
                   </Link>
                 </div>
               ))}
               <Link to="/blog" className="y2k-button w-full text-center block">
-                All News
+                Tous les articles
               </Link>
             </div>
           </Y2KWindow>
 
-          <Y2KWindow title="QUICK LINKS">
+          <Y2KWindow title="LIENS RAPIDES">
             <div className="grid grid-cols-2 gap-4">
               <a
                 href="https://www.youtube.com/@ldkino"
@@ -146,8 +146,8 @@ export const Home = () => {
       {/* Sidebar */}
       <div className="lg:col-span-4 space-y-6">
         <Y2KWindow
-          title="SYSTEM INFO"
-          headerClassName="bg-y2k-magenta text-black"
+          title="INFO.SYS"
+          headerClassName="bg-y2k-yellow text-black"
         >
           <div className="space-y-4 font-mono text-sm">
             <div className="flex justify-between border-b border-white/10 pb-2">
@@ -163,13 +163,13 @@ export const Home = () => {
               <span>FRANCE / TWITCH</span>
             </div>
             <p className="text-xs leading-relaxed opacity-80 mt-4 italic">
-              "Ludokino est votre média culture, jeu vidéo geek et otaku. LDKN
+              "LUDOKINO est votre média culture, jeu vidéo geek et otaku. LDKN
               pour les intimes."
             </p>
           </div>
         </Y2KWindow>
 
-        <Y2KWindow title="SHOWS LIST">
+        <Y2KWindow title="NOS ÉMISSIONS">
           <div className="space-y-3">
             {SHOWS.map((show) => (
               <Link
@@ -188,10 +188,10 @@ export const Home = () => {
           </div>
         </Y2KWindow>
 
-        <Y2KWindow title="AD SPACE" className="h-48">
+        <Y2KWindow title="ESPACE PUBLICITAIRE" className="h-48">
           <div className="w-full h-full bg-y2k-border flex items-center justify-center border-2 border-dashed border-white/20">
-            <span className="font-pixel text-2xl opacity-20 rotate-12">
-              DONNE L'ARGENT
+            <span className="font-pixel text-1xl opacity-20 rotate-12">
+              On a pas encore trouvé de sponsor, mais ça pourrait être vous !
             </span>
           </div>
         </Y2KWindow>
