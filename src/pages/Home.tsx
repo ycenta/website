@@ -7,6 +7,8 @@ import { Twitch, Youtube, Twitter, Instagram, ArrowRight } from "lucide-react";
 import { siBluesky, siTiktok, siX } from "simple-icons";
 
 export const Home = () => {
+  const isFirefox = navigator.userAgent.toLowerCase().includes("firefox");
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
       {/* Hero / Live Section */}
@@ -169,7 +171,11 @@ export const Home = () => {
           </div>
         </Y2KWindow>
         <Y2KWindow title="NOS ÉMISSIONS">
-          <div className="space-y-3 max-h-[475px] overflow-y-auto -mr-2 pr-2 y2k-scrollbar">
+          <div
+            className={`space-y-3 max-h-[475px] overflow-y-auto -mr-2 pr-2 y2k-scrollbar ${
+              isFirefox ? "-mr-4 pr-3" : ""
+            }`}
+          >
             {SHOWS.map((show) => (
               <Link
                 key={show.id}
