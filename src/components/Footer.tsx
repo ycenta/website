@@ -24,7 +24,7 @@ export const Footer = () => {
         </span>
       </div>
       <p className="font-pixel text-sm opacity-60 flex items-center justify-center gap-2 flex-wrap">
-        <span>&copy; 2026 LUDOKINO ASSOCIATION - TOUS DROITS RÉSERVÉS</span>
+        <span>&copy; 2026 LUDOKINO - TOUS DROITS RÉSERVÉS</span>
         <span className="opacity-40">|</span>
         <Link
           to="/mentions-legales"
