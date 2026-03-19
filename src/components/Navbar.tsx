@@ -38,7 +38,7 @@ const NavItem = ({ to, icon: Icon, children }: { to: string, icon: any, children
 export const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 w-full bg-gray-900 border-b-2 border-gray-700 flex items-center overflow-x-auto no-scrollbar">
-      <div className="flex items-center border-r-2 border-gray-700 px-4 py-2 bg-gray-800">
+      <div className="hidden md:flex items-center border-r-2 border-gray-700 px-4 py-2 bg-gray-800">
 <img src={`${import.meta.env.BASE_URL}img/LDKN.svg`} alt="LUDOKINO Logo" className="h-8 invert" />
       </div>
       <div className="flex flex-1">
@@ -46,7 +46,7 @@ export const Navbar = () => {
         <NavItem to="/shows" icon={Tv}>Emissions</NavItem>
         <NavItem to="/blog" icon={Newspaper}>Blog</NavItem>
         <NavItem to="/downloads" icon={Download}>Goodies</NavItem>
-        <NavItem to="/about" icon={Info}>À propos</NavItem>
+        <NavItem to="/about" icon={Info}>{"À\u00A0propos"}</NavItem>
       </div>
       <div className="hidden md:flex items-center gap-4 px-4">
         <a href="https://bsky.app/profile/ludokino.net" target="_blank" rel="noreferrer" className="text-y2k-yellow hover:scale-110 transition-transform">
