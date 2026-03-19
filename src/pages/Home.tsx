@@ -168,9 +168,8 @@ export const Home = () => {
             </p>
           </div>
         </Y2KWindow>
-
         <Y2KWindow title="NOS ÉMISSIONS">
-          <div className="space-y-3">
+          <div className="space-y-3 max-h-[475px] overflow-y-auto -mr-2 pr-2">
             {SHOWS.map((show) => (
               <Link
                 key={show.id}
