@@ -20,6 +20,7 @@ export const Home = () => {
               height="100%"
               width="100%"
               allowFullScreen
+              title="Dernier Omnibus"
               className="border-0"
             ></iframe>
           </div>

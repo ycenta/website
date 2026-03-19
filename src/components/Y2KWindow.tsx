@@ -18,7 +18,7 @@ export const Y2KWindow = ({ title, children, className, headerClassName, onClose
           <div className="w-3 h-3 bg-y2k-border border border-white/20"></div>
           <button 
             onClick={onClose}
-            className="w-3 h-3 bg-red-500 border border-black hover:bg-red-400 transition-colors cursor-pointer"
+            className="w-3 h-3 bg-red-500 border border-black hover:bg-red-400 transition-colors cursor-pointer" title="Fermer"
           ></button>
         </div>
       </div>
