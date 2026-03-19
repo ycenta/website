@@ -44,6 +44,15 @@
     @apply text-y2k-cyan hover:text-y2k-magenta transition-colors underline decoration-dotted underline-offset-4;
   }
 
+
+   .page-header {
+    @apply text-center space-y-2 max-w-2xl mx-auto rounded px-6 py-4;
+    background: rgba(42, 52, 84, 0.65);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+
   .scanline {
     width: 100%;
     height: 100px;

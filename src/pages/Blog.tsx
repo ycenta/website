@@ -39,7 +39,7 @@ export const Blog = () => {
 
   return (
     <div className="space-y-8">
-      <div className="text-center max-w-2xl mx-auto space-y-4">
+      <div className="page-header">
         <h1 className="text-5xl text-y2k-cyan">LUDOKINO BLOG</h1>
         <p className="text-xl opacity-80">
           Articles, dossiers et coulisses de la prod.
