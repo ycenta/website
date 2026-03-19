@@ -1,14 +1,14 @@
 ---
-title: Bienvenue sur le nouveau portail Ludokino
-date: 2026-03-13
+title: Bienvenue sur le nouveau portail LUDOKINO
+date: 2026-03-19
 author: Teloru
-category: News
-excerpt: On a enfin un site web ! Fini le Linktree, place à la vraie experience Y2K.
+category: NEWS
+excerpt: LUDOKINO a enfin un site web ! Fini la landing page, place à la vraie experience Y2K.
 ---
 
 # Bienvenue !
 
-C'est un grand jour pour Ludokino. On a voulu creer un espace qui nous ressemble, loin des algorithmes des réseaux sociaux.
+C'est un grand jour pour LUDOKINO. On a voulu creer un espace qui nous ressemble, loin des algorithmes des réseaux sociaux.
 
 Ici vous trouverez :
 - Nos dernières emissions
