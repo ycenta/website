@@ -45,6 +45,11 @@
   }
 
   /* Windows XP Style Scrollbar */
+  .y2k-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #7a8ec0 #2a3454;
+  }
+
   .y2k-scrollbar::-webkit-scrollbar {
     width: 16px;
   }
