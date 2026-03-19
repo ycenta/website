@@ -12,7 +12,7 @@ export const Blog = () => {
     return (
       <div className="text-center p-20">
         <h1 className="text-6xl text-red-500">404: POST_NOT_FOUND</h1>
-        <Link to="/blog" className="y2k-link mt-4 inline-block">Back to index</Link>
+        <Link to="/blog" className="y2k-link mt-4 inline-block">Retour à l'accueil</Link>
       </div>
     );
   }
@@ -20,7 +20,7 @@ export const Blog = () => {
   if (post) {
     return (
       <div className="max-w-4xl mx-auto space-y-6">
-        <Link to="/blog" className="y2k-link mb-4 inline-block">← Back to index</Link>
+        <Link to="/blog" className="y2k-link mb-4 inline-block">← Retour à l'accueil</Link>
         <Y2KWindow title={post.title}>
           <div className="p-4 md:p-8">
             <div className="mb-8 border-b border-y2k-border pb-6">
@@ -40,9 +40,9 @@ export const Blog = () => {
   return (
     <div className="space-y-8">
       <div className="page-header">
-        <h1 className="text-5xl text-y2k-cyan">LUDOKINO BLOG</h1>
+        <h1 className="text-5xl text-y2k-cyan">BLOG</h1>
         <p className="text-xl opacity-80">
-          Articles, dossiers et coulisses de la prod.
+          Retrouvez nos articles, quelques informations et des coulisses sur la prod.
         </p>
       </div>
 
@@ -53,7 +53,7 @@ export const Blog = () => {
               <span className="text-xs text-y2k-cyan font-mono">{post.date}</span>
               <h2 className="text-2xl text-y2k-green">{post.title}</h2>
               <p className="opacity-80 line-clamp-3">{post.excerpt}</p>
-              <Link to={`/blog/${post.id}`} className="y2k-button block text-center">Read Article</Link>
+              <Link to={`/blog/${post.id}`} className="y2k-button block text-center">Lire l'article</Link>
             </div>
           </Y2KWindow>
         ))}
