@@ -34,7 +34,7 @@ export const About = () => {
               <h2 className="text-2xl">Loi 1901</h2>
             </div>
             <p className="leading-relaxed">
-              Ludokino est une association loi 1901 dédiée à la création d'un
+              LUDOKINO est une association loi 1901 dédiée à la création d'un
               média indépendant. Notre objectif est de professionnaliser notre
               passion tout en conservant l'esprit libre et créatif des médias
               qui nous ont inspirés.
@@ -89,7 +89,7 @@ export const About = () => {
         <Heart size={48} className="mx-auto text-red-500 animate-pulse" />
         <h2 className="text-3xl">REJOIGNEZ L'AVENTURE</h2>
         <p className="max-w-xl mx-auto opacity-70">
-          Ludokino est un projet ouvert. Si vous avez des talents en montage,
+          LUDOKINO est un projet ouvert. Si vous avez des talents en montage,
           rédaction, graphisme ou que vous voulez simplement nous soutenir,
           contactez-nous !
         </p>
