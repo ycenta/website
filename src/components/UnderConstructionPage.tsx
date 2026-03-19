@@ -19,7 +19,7 @@ export const UnderConstructionPage = ({
           <h1 className="text-3xl text-y2k-magenta">{title}</h1>
           <p className="opacity-70">{subtitle}</p>
           <p className="text-lg text-y2k-cyan">
-            Encore en cours de construction, repasse plus tard!
+            Encore en cours de construction, repasse plus tard !
           </p>
         </div>
       </Y2KWindow>
