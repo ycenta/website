@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&family=VT323&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -6,23 +6,28 @@
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
   --font-pixel: "VT323", monospace;
 
-  --color-y2k-green: #F6E4B6;
-  --color-y2k-cyan: #C0CFE3;
-  --color-y2k-magenta: #E91E8C;
-  --color-y2k-yellow: #F7C92F;
+  --color-y2k-green: #f6e4b6;
+  --color-y2k-cyan: #c0cfe3;
+  --color-y2k-magenta: #e91e8c;
+  --color-y2k-yellow: #f7c92f;
   --color-y2k-bg: #2a3454;
-  --color-y2k-window: #40518A;
+  --color-y2k-window: #40518a;
   --color-y2k-border: #6276a8;
 }
 
 @layer base {
   body {
     @apply bg-y2k-bg text-white font-sans selection:bg-y2k-yellow selection:text-y2k-bg;
-    background: url('/img/image.jpg') center/cover fixed;
+    background: url("/img/image.jpg") center/cover fixed;
     pointer-events: auto;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-pixel uppercase tracking-wider;
   }
 }
@@ -57,7 +62,9 @@
   .y2k-scrollbar::-webkit-scrollbar-thumb {
     background: linear-gradient(to right, #6276a8, #7a8ec0, #6276a8);
     border: 1px solid #4a5a88;
-    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.3), inset -1px -1px 0 rgba(0, 0, 0, 0.3);
+    box-shadow:
+      inset 1px 1px 0 rgba(255, 255, 255, 0.3),
+      inset -1px -1px 0 rgba(0, 0, 0, 0.3);
   }
 
   .y2k-scrollbar::-webkit-scrollbar-thumb:hover {
@@ -91,19 +98,23 @@
     background-position: center;
   }
 
-   .page-header {
+  .page-header {
     @apply text-center space-y-2 max-w-2xl mx-auto rounded px-6 py-4;
     background: rgba(42, 52, 84, 0.65);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
   }
 
-
   .scanline {
     width: 100%;
     height: 100px;
     z-index: 10;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(255, 255, 255, 0.05) 50%,
+      rgba(0, 0, 0, 0) 100%
+    );
     opacity: 0.1;
     position: fixed;
     bottom: 100%;
@@ -111,8 +122,35 @@
   }
 
   @keyframes scanline {
-    0% { bottom: 100%; }
-    100% { bottom: -100px; }
+    0% {
+      bottom: 100%;
+    }
+    100% {
+      bottom: -100px;
+    }
+  }
+
+  .scroll-to-top {
+    @apply fixed right-4 bottom-6 z-40 h-11 w-11 p-0 flex items-center justify-center;
+    border-width: 2px;
+    backdrop-filter: blur(2px);
+  }
+
+  .scroll-to-top-visible {
+    @apply opacity-100 translate-y-0 pointer-events-auto;
+  }
+
+  .scroll-to-top-hidden {
+    @apply opacity-0 translate-y-2 pointer-events-none;
+  }
+
+  .scroll-to-top,
+  .scroll-to-top-visible,
+  .scroll-to-top-hidden {
+    transition:
+      opacity 180ms ease,
+      transform 180ms ease,
+      background-color 180ms ease;
   }
 }
 
@@ -120,10 +158,18 @@
   @apply space-y-4 leading-relaxed;
 }
 
-.markdown-body h1 { @apply text-3xl text-y2k-green mb-4; }
-.markdown-body h2 { @apply text-2xl text-y2k-cyan mt-8 mb-4; }
-.markdown-body p { @apply text-lg opacity-90; }
-.markdown-body ul { @apply list-disc list-inside space-y-2; }
-.markdown-body a { 
+.markdown-body h1 {
+  @apply text-3xl text-y2k-green mb-4;
+}
+.markdown-body h2 {
+  @apply text-2xl text-y2k-cyan mt-8 mb-4;
+}
+.markdown-body p {
+  @apply text-lg opacity-90;
+}
+.markdown-body ul {
+  @apply list-disc list-inside space-y-2;
+}
+.markdown-body a {
   @apply text-y2k-cyan hover:text-y2k-magenta transition-colors underline decoration-dotted underline-offset-4;
 }

@@ -7,6 +7,7 @@ import { Blog } from "./pages/Blog";
 import { Downloads } from "./pages/Downloads";
 import { About } from "./pages/About";
 import { Legal } from "./pages/Legal";
+import { ScrollToTopButton } from "./components/ScrollToTopButton";
 
 export default function App() {
   return (
@@ -27,6 +28,8 @@ export default function App() {
             <Route path="/mentions-legales" element={<Legal />} />
           </Routes>
         </main>
+
+        <ScrollToTopButton />
 
         <Footer />
       </div>
