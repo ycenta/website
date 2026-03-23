@@ -151,6 +151,7 @@ export const Home = () => {
         <Y2KWindow
           title="INFO.SYS"
           headerClassName="bg-y2k-yellow text-black"
+          className="hidden lg:block"
         >
           <div className="space-y-4 font-mono text-sm">
             <div className="flex justify-between border-b border-white/10 pb-2">
