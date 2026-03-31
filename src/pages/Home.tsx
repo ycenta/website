@@ -5,7 +5,7 @@ import { BLOG_POSTS } from "../lib/blog";
 import { Link } from "react-router-dom";
 import { Twitch, Youtube, Twitter, Instagram, ArrowRight } from "lucide-react";
 import { siBluesky, siTiktok, siX } from "simple-icons";
-
+const parent = typeof window !== 'undefined' ? window.location.hostname : 'ludokino.net';
 export const Home = () => {
   const isFirefox = navigator.userAgent.toLowerCase().includes("firefox");
 
@@ -13,16 +13,17 @@ export const Home = () => {
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
       {/* Hero / Live Section */}
       <div className="lg:col-span-8 space-y-6">
-        <Y2KWindow title="LE DERNIER OMNIBUS" className="aspect-video">
+        <Y2KWindow title="OMNIBUS 7 - SPÉCIAL 1ER AVRIL" className="aspect-video">
           <div className="w-full h-full bg-black flex items-center justify-center relative group">
             <iframe
-              src="https://www.youtube-nocookie.com/embed/K1d3xz6k2Z0?si=mBRFhXXGLe0teyjX"
+              src={`https://player.twitch.tv/?channel=wendohldkn&parent=${parent}&muted=true&autoplay=false`}
               height="100%"
               width="100%"
               allowFullScreen
-              title="Dernier Omnibus"
+              title="Live Twitch de LUDOKINO"
               className="border-0"
             ></iframe>
+            
           </div>
         </Y2KWindow>
 
@@ -144,10 +145,27 @@ export const Home = () => {
             </div>
           </Y2KWindow>
         </div>
+        <Y2KWindow title="ESPACE PUBLICITAIRE" className="h-48">
+          <div className="w-full h-full bg-y2k-border flex items-center justify-center border-2 border-dashed border-white/20">
+            <span className="font-pixel text-1xl opacity-20 rotate-12">
+              On a pas encore trouvé de sponsor, mais ça pourrait être vous !
+            </span>
+          </div>
+        </Y2KWindow>
       </div>
 
       {/* Sidebar */}
       <div className="lg:col-span-4 space-y-6">
+        
+      <Y2KWindow title="CHAT LIVE" className="hidden lg:block">
+        <div className="aspect-[8/9] w-full">
+      <iframe
+        src={`https://www.twitch.tv/embed/wendohldkn/chat?parent=${parent}&darkpopout`}
+        id="chat_embed"
+         className="w-full h-full border-0"
+      /></div>
+    </Y2KWindow>
+
         <Y2KWindow
           title="INFO.SYS"
           headerClassName="bg-y2k-yellow text-black"
@@ -172,6 +190,8 @@ export const Home = () => {
             </p>
           </div>
         </Y2KWindow>
+
+        
         <Y2KWindow title="NOS ÉMISSIONS">
           <div
             className={`space-y-3 max-h-[475px] overflow-y-auto -mr-2 pr-2 y2k-scrollbar ${
@@ -195,13 +215,7 @@ export const Home = () => {
           </div>
         </Y2KWindow>
 
-        <Y2KWindow title="ESPACE PUBLICITAIRE" className="h-48">
-          <div className="w-full h-full bg-y2k-border flex items-center justify-center border-2 border-dashed border-white/20">
-            <span className="font-pixel text-1xl opacity-20 rotate-12">
-              On a pas encore trouvé de sponsor, mais ça pourrait être vous !
-            </span>
-          </div>
-        </Y2KWindow>
+        
       </div>
     </div>
   );
