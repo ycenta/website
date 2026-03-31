@@ -149,6 +149,7 @@ export const Home = () => {
             </div>
           </Y2KWindow>
         </div>
+         {isLive && (
         <Y2KWindow title="ESPACE PUBLICITAIRE" className="h-48">
           <div className="w-full h-full bg-y2k-border flex items-center justify-center border-2 border-dashed border-white/20">
             <span className="font-pixel text-1xl opacity-20 rotate-12">
@@ -156,6 +157,7 @@ export const Home = () => {
             </span>
           </div>
         </Y2KWindow>
+          )}
       </div>
 
       {/* Sidebar */}
@@ -171,15 +173,21 @@ export const Home = () => {
       /></div>
     </Y2KWindow>
           )}
-        <Y2KWindow
-          title="INFO.SYS"
-          headerClassName="bg-y2k-yellow text-black"
-          className="hidden lg:block"
-        >
-          <div className="space-y-4 font-mono text-sm">
-            <div className="flex justify-between border-b border-white/10 pb-2">
-              <span className="opacity-60">STATUS:</span>
-              <span className="text-y2k-green">ONLINE</span>
+       <Y2KWindow
+  title="INFO.SYS"
+  headerClassName="bg-y2k-yellow text-black"
+  className="hidden lg:block"
+>
+  <div className="space-y-4 font-mono text-sm">
+
+    <div className="flex justify-between border-b border-white/10 pb-2">
+      <span className="opacity-60">STATUS:</span>
+      <span className={`flex items-center gap-1.5 ${isLive ? "text-green-400" : "text-red-400"}`}>
+        {isLive && (
+          <span className="inline-block w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+        )}
+        {isLive ? "ONLINE" : "OFFLINE"}
+      </span>
             </div>
             <div className="flex justify-between border-b border-white/10 pb-2">
               <span className="opacity-60">VERSION:</span>
@@ -219,7 +227,15 @@ export const Home = () => {
             ))}
           </div>
         </Y2KWindow>
-
+ {!isLive && (
+        <Y2KWindow title="ESPACE PUBLICITAIRE" className="h-48">
+          <div className="w-full h-full bg-y2k-border flex items-center justify-center border-2 border-dashed border-white/20">
+            <span className="font-pixel text-1xl opacity-20 rotate-12">
+              On a pas encore trouvé de sponsor, mais ça pourrait être vous !
+            </span>
+          </div>
+        </Y2KWindow>
+          )}
         
       </div>
     </div>
