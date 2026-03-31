@@ -79,6 +79,13 @@ export const Legal = () => {
             (<code>youtube-nocookie.com</code>). Aucun cookie n'est déposé par YouTube avant que l'utilisateur
             ne lance la lecture.
           </p>
+          <p>
+            Le player Twitch ainsi que le chat Twitch peuvent être intégrés sur ce site lors des 
+            périodes de live. Ces éléments sont fournis par Twitch Interactive, Inc. (San Francisco, 
+            États-Unis) et sont soumis à leur politique de confidentialité disponible sur 
+            https://www.twitch.tv/p/legal/privacy-policy/. Twitch peut déposer des cookies et 
+            collecter des données de navigation dès le chargement de ces éléments.
+          </p>
         </div>
       </Y2KWindow>
  
