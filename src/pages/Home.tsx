@@ -13,10 +13,10 @@ export const Home = () => {
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
       {/* Hero / Live Section */}
       <div className="lg:col-span-8 space-y-6">
-        <Y2KWindow title="LE DERNIER OMNIBUS" className="aspect-video">
+        <Y2KWindow title="OMNIBUS 7 - SPÉCIAL 1ER AVRIL" className="aspect-video">
           <div className="w-full h-full bg-black flex items-center justify-center relative group">
             <iframe
-              src="https://www.youtube-nocookie.com/embed/K1d3xz6k2Z0?si=mBRFhXXGLe0teyjX"
+              src="https://player.twitch.tv/?channel=wendohldkn&parent=ludokino.net&muted=true"
               height="100%"
               width="100%"
               allowFullScreen
