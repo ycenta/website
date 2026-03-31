@@ -5,7 +5,10 @@ import { BLOG_POSTS } from "../lib/blog";
 import { Link } from "react-router-dom";
 import { Twitch, Youtube, Twitter, Instagram, ArrowRight } from "lucide-react";
 import { siBluesky, siTiktok, siX } from "simple-icons";
-const parent = typeof window !== 'undefined' ? window.location.hostname : 'ludokino.net';
+const isLive = false; // ← true pendant le live, false sinon
+const TWITCH_CHANNEL = "wendohldkn";
+const YOUTUBE_PLAYLIST = "PL13-SWMvlfiwijmK3dQ_rHY67bJj6rJ3P";
+const parent = window.location.hostname; typeof window !== 'undefined' ? window.location.hostname : 'ludokino.net';
 export const Home = () => {
   const isFirefox = navigator.userAgent.toLowerCase().includes("firefox");
 
@@ -13,19 +16,20 @@ export const Home = () => {
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
       {/* Hero / Live Section */}
       <div className="lg:col-span-8 space-y-6">
-        <Y2KWindow title="OMNIBUS 7 - SPÉCIAL 1ER AVRIL" className="aspect-video">
-          <div className="w-full h-full bg-black flex items-center justify-center relative group">
-            <iframe
-              src={`https://player.twitch.tv/?channel=wendohldkn&parent=${parent}&muted=true&autoplay=false`}
-              height="100%"
-              width="100%"
-              allowFullScreen
-              title="Live Twitch de LUDOKINO"
-              className="border-0"
-            ></iframe>
-            
-          </div>
-        </Y2KWindow>
+     <Y2KWindow title={isLive ? "Diffusion en direct" : "LES OMNIBUS"}>
+  <div className="aspect-video w-full">
+    <iframe
+      src={
+  isLive
+    ? `https://player.twitch.tv/?channel=${TWITCH_CHANNEL}&parent=${parent}&muted=true&autoplay=true`
+    : `https://www.youtube-nocookie.com/embed/videoseries?list=${YOUTUBE_PLAYLIST}&autoplay=1&mute=1`
+}
+      className="w-full h-full border-0"
+      allowFullScreen
+      title={isLive ? "Dernier Omnibus" : "Playlist Omnibus"}
+    />
+  </div>
+</Y2KWindow>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Y2KWindow title="DERNIERS ARTICLES">
@@ -157,6 +161,7 @@ export const Home = () => {
       {/* Sidebar */}
       <div className="lg:col-span-4 space-y-6">
         
+        {isLive && (
       <Y2KWindow title="CHAT LIVE" className="hidden lg:block">
         <div className="aspect-[8/9] w-full">
       <iframe
@@ -165,7 +170,7 @@ export const Home = () => {
          className="w-full h-full border-0"
       /></div>
     </Y2KWindow>
-
+          )}
         <Y2KWindow
           title="INFO.SYS"
           headerClassName="bg-y2k-yellow text-black"
