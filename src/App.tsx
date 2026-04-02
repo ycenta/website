@@ -13,7 +13,7 @@ export default function App() {
   return (
     <Router>
       <div className="min-h-screen flex flex-col relative">
-        <div className="scanline"></div>
+        <div className="scanline" aria-hidden="true"></div>
 
         <Navbar />
 
