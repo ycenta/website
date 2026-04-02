@@ -2,13 +2,12 @@
 title: QUI FÊTE ENCORE LE 1ER AVRIL ? – OMNIBUS #7
 date: 2026-04-01
 author: VincenTimes
-category: Omnibus
+category: OMNIBUS
+thumbnail: https://img.youtube.com/vi/C6OTtnyglyQ/maxresdefault.jpg
 excerpt: 1h30 de LUDOKINO pour fêter le 1er avril comme il se doit. On ne vous dira pas tout.
 ---
 
-[![OMNIBUS #7 – QUI FÊTE ENCORE LE 1ER AVRIL ?](https://img.youtube.com/vi/C6OTtnyglyQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=C6OTtnyglyQ)
-
-> 🏷️ *Vidéo YouTube — en cliquant, vous quittez LUDOKINO.net.*
+[▶ Regarder l'Omnibus #7 sur YouTube](https://www.youtube.com/watch?v=C6OTtnyglyQ)
 
 ---
 
@@ -57,16 +56,6 @@ Sur YouTube, l'Omnibus est intégralement **chapitré** : si vous voulez aller d
 Mais l'émission est conçue pour être regardée comme un **long tunnel** : vous lancez au début, vous laissez tourner, et vous prenez ce qui vient, comme une soirée télé un peu chelou qu'on aurait enregistrée sur un vieux disque dur.
 
 On garde le même ADN que le reste de LUDOKINO : des formats longs, assumés, qui prennent le temps de mélanger **jeux vidéo, anime, musique, tokusatsu et culture Internet** sans demander la permission à l'algorithme.
-
----
-
-## Où regarder l’Omnibus #7
-
-L'**Omnibus #7 – *"QUI FÊTE ENCORE LE 1ER AVRIL ?"*** est disponible sur la chaîne YouTube LUDOKINO :
-
-> ▶️ [Regarder l'Omnibus #7 sur YouTube](https://www.youtube.com/watch?v=C6OTtnyglyQ)
-
-Si vous découvrez le projet avec ce numéro, vous pouvez aussi retrouver les anciens **Omnibus**, les chroniques **arka‑TECH**, **TOKUKINO**, les vidéos musique et toutes nos autres expérimentations directement depuis l'accueil du site.
 
 ---
 
