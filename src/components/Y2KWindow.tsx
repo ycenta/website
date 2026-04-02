@@ -2,7 +2,7 @@ import React from 'react';
 import { cn } from '../lib/utils';
 
 interface WindowProps {
-  title: string;
+  title: React.ReactNode;
   children: React.ReactNode;
   className?: string;
   headerClassName?: string;

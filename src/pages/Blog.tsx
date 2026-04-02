@@ -3,6 +3,9 @@ import { Y2KWindow } from '../components/Y2KWindow';
 import { BLOG_POSTS } from '../lib/blog';
 import { Link, useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
+import { ArrowRight, Star } from 'lucide-react';
+import { formatDate } from '../lib/utils';
+import { CATEGORY_ICONS } from '../lib/categoryIcons';
 
 export const Blog = () => {
   const { id } = useParams();
@@ -18,18 +21,54 @@ export const Blog = () => {
   }
 
   if (post) {
+    const PostIcon = CATEGORY_ICONS[post.category] || Star;
     return (
       <div className="max-w-4xl mx-auto space-y-6">
-        <Link to="/blog" className="y2k-link mb-4 inline-block">← Retour à l'accueil</Link>
-        <Y2KWindow title={post.title}>
+        <Link to="/blog" className="y2k-link mb-4 inline-block page-header text-left">← Retour à l'accueil</Link>
+        <Y2KWindow title={
+          <span style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <PostIcon size={14} /> {post.title}
+          </span>
+        }>
           <div className="p-4 md:p-8">
             <div className="mb-8 border-b border-y2k-border pb-6">
-              <span className="text-y2k-cyan font-mono">{post.date} | {post.category}</span>
+              <span className="text-y2k-cyan font-mono">{formatDate(post.date)} | {post.category}</span>
               <h1 className="text-5xl text-y2k-green mt-2">{post.title}</h1>
-              <span className="text-sm opacity-60">By {post.author}</span>
+              <span className="text-sm opacity-60">par {post.author}</span>
             </div>
             <div className="markdown-body">
-              <ReactMarkdown>{post.content}</ReactMarkdown>
+              <ReactMarkdown
+                components={{
+                  img({ src, alt }) {
+                    return (
+                      <span className="block rounded overflow-hidden mb-4">
+                        <img src={src} alt={alt} style={{ width: '100%', objectFit: 'cover' }} />
+                      </span>
+                    );
+                  },
+                  a({ href, children }) {
+                    const match = href?.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+                    const childText = Array.isArray(children) ? children.join('') : String(children);
+                    const wantsEmbed = childText.startsWith('▶');
+                    if (match && wantsEmbed) {
+                      return (
+                        <span className="block rounded overflow-hidden mb-4" style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+                          <iframe
+                            src={`https://www.youtube-nocookie.com/embed/${match[1]}`}
+                            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            title="YouTube video"
+                          />
+                        </span>
+                      );
+                    }
+                    return <a href={href}>{children}</a>;
+                  },
+                }}
+              >
+                {post.content}
+              </ReactMarkdown>
             </div>
           </div>
         </Y2KWindow>
@@ -47,16 +86,32 @@ export const Blog = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {BLOG_POSTS.map(post => (
-          <Y2KWindow key={post.id} title={post.category}>
-            <div className="space-y-4">
-              <span className="text-xs text-y2k-cyan font-mono">{post.date}</span>
-              <h2 className="text-2xl text-y2k-green">{post.title}</h2>
-              <p className="opacity-80 line-clamp-3">{post.excerpt}</p>
-              <Link to={`/blog/${post.id}`} className="y2k-button block text-center">Lire l'article</Link>
-            </div>
-          </Y2KWindow>
-        ))}
+        {BLOG_POSTS.map(post => {
+          const PostIcon = CATEGORY_ICONS[post.category] || Star;
+          return (
+            <Y2KWindow key={post.id} title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <PostIcon size={14} /> {post.category}
+              </span>
+            }>
+              <div className="space-y-4">
+                <Link to={`/blog/${post.id}`} className="block mb-4 rounded overflow-hidden">
+                  {post.thumbnail && (
+                    <img src={post.thumbnail} alt={post.title} style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover' }} />
+                  )}
+                </Link>
+                <span className="text-y2k-cyan font-mono">{formatDate(post.date)} — par {post.author}</span>
+                <Link to={`/blog/${post.id}`} className="block">
+                  <h2 className="text-2xl text-y2k-green">{post.title}</h2>
+                </Link>
+                <p className="opacity-80 line-clamp-3">{post.excerpt}</p>
+                <Link to={`/blog/${post.id}`} className="y2k-button block text-center">
+                  Lire l'article <ArrowRight size={16} className="inline-block ml-1" />
+                </Link>
+              </div>
+            </Y2KWindow>
+          );
+        })}
       </div>
     </div>
   );

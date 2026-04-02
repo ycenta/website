@@ -1,22 +1,8 @@
 import React from "react";
 import { Y2KWindow } from "../components/Y2KWindow";
 import { SHOWS } from "../constants";
-import { Music, Bot, Cpu, Film, Sandwich, PlayCircle, Tv, Star, Zap, Clock, FolderOpen, Sunrise } from "lucide-react";
- 
-const IconMap: Record<string, any> = {
-  Music,
-  Bot,
-  Cpu,
-  Film,
-  Sandwich,
-  Tv,
-  Star,
-  Zap,
-  Clock,
-  FolderOpen,
-  Sunrise,
-  PlayCircle,
-};
+import { CATEGORY_ICONS } from '../lib/categoryIcons';
+import { PlayCircle, ArrowRight } from 'lucide-react';
 
 export const Shows = () => {
   return (
@@ -31,7 +17,7 @@ export const Shows = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {SHOWS.map((show) => {
-          const Icon = IconMap[show.icon] || PlayCircle;
+          const Icon = CATEGORY_ICONS[show.title] || PlayCircle;
           return (
             <Y2KWindow key={show.id} title={show.title}>
               <div className="flex gap-6">
@@ -49,7 +35,7 @@ export const Shows = () => {
                     rel="noopener noreferrer"
                     className="y2k-button"
                   >
-                    Voir les épisodes
+                    Voir les épisodes <ArrowRight size={16} className="inline-block ml-1" />
                   </a>
                 </div>
               </div>
@@ -71,15 +57,9 @@ export const Shows = () => {
             *Pas tout le temps non plus, genre des fois c'est 2h30, d'autres fois c'est 1h45...
           </p>
           <div className="flex justify-center gap-4 pt-4">
-            <div className="px-4 py-2 bg-y2k-border border border-white/20 text-xs font-mono">
-              50 FPS
-            </div>
-            <div className="px-4 py-2 bg-y2k-border border border-white/20 text-xs font-mono">
-              1080P
-            </div>
-            <div className="px-4 py-2 bg-y2k-border border border-white/20 text-xs font-mono">
-              STEREO
-            </div>
+            <div className="px-4 py-2 bg-y2k-border border border-white/20 text-xs font-mono">50 FPS</div>
+            <div className="px-4 py-2 bg-y2k-border border border-white/20 text-xs font-mono">1080P</div>
+            <div className="px-4 py-2 bg-y2k-border border border-white/20 text-xs font-mono">STEREO</div>
           </div>
         </div>
       </Y2KWindow>
