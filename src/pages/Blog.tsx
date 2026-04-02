@@ -4,27 +4,67 @@ import { BLOG_POSTS } from '../lib/blog';
 import { Link, useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { ArrowRight, Star } from 'lucide-react';
+import { NotFound } from './NotFound';
 import { formatDate } from '../lib/utils';
 import { CATEGORY_ICONS } from '../lib/categoryIcons';
+import { Helmet } from 'react-helmet-async'
 
 export const Blog = () => {
   const { id } = useParams();
   const post = id ? BLOG_POSTS.find(p => p.id === id) : null;
 
   if (id && !post) {
-    return (
-      <div className="text-center p-20">
-        <h1 className="text-6xl text-red-500">404: POST_NOT_FOUND</h1>
-        <Link to="/blog" className="y2k-link mt-4 inline-block">Retour à l'accueil</Link>
-      </div>
-    );
+       return <NotFound />;
   }
 
   if (post) {
     const PostIcon = CATEGORY_ICONS[post.category] || Star;
     return (
       <div className="max-w-4xl mx-auto space-y-6">
-        <Link to="/blog" className="y2k-link mb-4 inline-block page-header text-left">← Retour à l'accueil</Link>
+        <Helmet>
+          {/* Base */}
+          <title>{post.title} — LUDOKINO</title>
+          <meta name="description" content={post.excerpt} />
+          <meta name="author" content={post.author} />
+          <link rel="canonical" href={`https://ludokino.net/blog/${post.id}`} />
+
+          {/* Open Graph (Facebook, Discord, LinkedIn) */}
+          <meta property="og:type" content="article" />
+          <meta property="og:site_name" content="LUDOKINO" />
+          <meta property="og:locale" content="fr_FR" />
+          <meta property="og:title" content={`${post.title} — LUDOKINO`} />
+          <meta property="og:description" content={post.excerpt} />
+          <meta property="og:url" content={`https://ludokino.net/blog/${post.id}`} />
+          {post.thumbnail && <meta property="og:image" content={post.thumbnail} />}
+
+          {/* Article */}
+          <meta property="article:author" content={post.author} />
+          <meta property="article:published_time" content={post.date} />
+
+          {/* Twitter / X */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@ludokino" />
+          <meta name="twitter:title" content={post.title} />
+          <meta name="twitter:description" content={post.excerpt} />
+          {post.thumbnail && <meta name="twitter:image" content={post.thumbnail} />}
+
+          {/* JSON-LD pour Google */}
+          <script type="application/ld+json">{JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": post.title,
+            "description": post.excerpt,
+            "author": { "@type": "Person", "name": post.author },
+            "datePublished": post.date,
+            "image": post.thumbnail,
+            "publisher": {
+              "@type": "Organization",
+              "name": "LUDOKINO",
+              "url": "https://ludokino.net"
+            }
+          })}</script>
+        </Helmet>
+        <Link to="/blog" className="y2k-link mb-4 inline-block page-header text-left">← Retour aux articles</Link>
         <Y2KWindow title={
           <span style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <PostIcon size={14} /> {post.title}
