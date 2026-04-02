@@ -1,5 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { Home } from "./pages/Home";
@@ -12,28 +11,10 @@ import { NotFound } from "./pages/NotFound";
 import { ScrollToTopButton } from "./components/ScrollToTopButton";
 import { HelmetProvider } from "react-helmet-async";
 
-function RedirectHandler() {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const redirect = params.get("redirect");
-
-    if (redirect) {
-      navigate(redirect, { replace: true });
-    }
-  }, [location.search, navigate]);
-
-  return null;
-}
-
 export default function App() {
   return (
     <HelmetProvider>
       <Router>
-        <RedirectHandler />
-
         <div className="min-h-screen flex flex-col relative">
           <div className="scanline" aria-hidden="true"></div>
 
