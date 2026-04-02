@@ -27,52 +27,67 @@ export const Home = () => {
         <link rel="canonical" href="https://ludokino.net" />
         <meta property="og:url" content="https://ludokino.net" />
         <meta name="twitter:url" content="https://ludokino.net" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ludokino.net" />
+        <meta property="og:title" content="LUDOKINO — Jeux vidéo, anime et culture geek" />
+        <meta property="og:description" content="Jeux vidéo, anime, tokusatsu, musique et tech. LUDOKINO c'est le média des passionnés de culture geek et otaku — émissions, articles et goodies." />
+        <meta property="og:image" content="https://ludokino.net/img/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta property="og:site_name" content="LUDOKINO" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://ludokino.net" />
+        <meta name="twitter:title" content="LUDOKINO — Jeux vidéo, anime et culture geek" />
+        <meta name="twitter:description" content="Jeux vidéo, anime, tokusatsu, musique et tech. LUDOKINO c'est le média des passionnés de culture geek et otaku — émissions, articles et goodies." />
+        <meta name="twitter:image" content="https://ludokino.net/img/og-image.jpg" />
       </Helmet>
       {/* Hero / Live Section */}
       <div className="lg:col-span-8 space-y-6">
-     <Y2KWindow title={
-  <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-    {isLive ? <Radio size={14} /> : <Tv size={14} />}
-    {isLive ? 'DIFFUSION EN DIRECT' : 'LES OMNIBUS'}
-  </span>
-}>
-  <div className="aspect-video w-full">
-    <iframe
-      src={
-  isLive
-    ? `https://player.twitch.tv/?channel=${TWITCH_CHANNEL}&parent=${parent}&muted=true&autoplay=true`
-    : `https://www.youtube-nocookie.com/embed/videoseries?list=${YOUTUBE_PLAYLIST}&autoplay=1&mute=1`
-}
-      className="w-full h-full border-0"
-      allowFullScreen
-      title={isLive ? "Dernier Omnibus" : "Playlist Omnibus"}
-    />
-  </div>
-</Y2KWindow>
+        <Y2KWindow title={
+          <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            {isLive ? <Radio size={14} /> : <Tv size={14} />}
+            {isLive ? 'DIFFUSION EN DIRECT' : 'LES OMNIBUS'}
+          </span>
+        }>
+          <div className="aspect-video w-full">
+            <iframe
+              src={
+                isLive
+                  ? `https://player.twitch.tv/?channel=${TWITCH_CHANNEL}&parent=${parent}&muted=true&autoplay=true`
+                  : `https://www.youtube-nocookie.com/embed/videoseries?list=${YOUTUBE_PLAYLIST}&autoplay=1&mute=1`
+              }
+              className="w-full h-full border-0"
+              allowFullScreen
+              title={isLive ? "Dernier Omnibus" : "Playlist Omnibus"}
+            />
+          </div>
+        </Y2KWindow>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Y2KWindow title={<span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><FileText size={14} /> DERNIERS ARTICLES</span>}>
             <div className="space-y-4">
               {BLOG_POSTS.slice(0, 2).map((post) => {
-  const PostIcon = CATEGORY_ICONS[post.category] || Star;
-  return (
-    <div key={post.id} className="border-b border-y2k-border pb-4 last:border-0">
-      <span className="text-xs text-y2k-cyan font-mono">
-        {formatDate(post.date)} — {post.category}
-      </span>
-      <h3 className="text-xl text-y2k-green mt-1">
-        <span style={{ display: 'inline-block', marginRight: '6px', verticalAlign: 'top', marginTop: '7px' }}>
-          <PostIcon size={14} />
-        </span>
-        {post.title}
-      </h3>
-      <p className="text-sm opacity-80 line-clamp-2 mt-2">{post.excerpt}</p>
-      <Link to={`/blog/${post.id}`} className="y2k-link text-sm mt-2 inline-block">
-        Lire l'article <ArrowRight size={16} className="inline-block ml-1" />
-      </Link>
-    </div>
-  );
-})}
+                const PostIcon = CATEGORY_ICONS[post.category] || Star;
+                return (
+                  <div key={post.id} className="border-b border-y2k-border pb-4 last:border-0">
+                    <span className="text-xs text-y2k-cyan font-mono">
+                      {formatDate(post.date)} — {post.category}
+                    </span>
+                    <h3 className="text-xl text-y2k-green mt-1">
+                      <span style={{ display: 'inline-block', marginRight: '6px', verticalAlign: 'top', marginTop: '7px' }}>
+                        <PostIcon size={14} />
+                      </span>
+                      {post.title}
+                    </h3>
+                    <p className="text-sm opacity-80 line-clamp-2 mt-2">{post.excerpt}</p>
+                    <Link to={`/blog/${post.id}`} className="y2k-link text-sm mt-2 inline-block">
+                      Lire l'article <ArrowRight size={16} className="inline-block ml-1" />
+                    </Link>
+                  </div>
+                );
+              })}
               <Link to="/blog" className="y2k-button w-full text-center block">
                 Tous les articles <ArrowRight size={16} className="inline-block ml-1" />
               </Link>
@@ -168,45 +183,45 @@ export const Home = () => {
             </div>
           </Y2KWindow>
         </div>
-         {isLive && (
-        <Y2KWindow title={<span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Megaphone size={14} /> ESPACE PUBLICITAIRE</span>} className="h-48">
-          <div className="w-full h-full bg-y2k-border flex items-center justify-center border-2 border-dashed border-white/20">
-            <span className="font-pixel text-1xl opacity-20 rotate-12">
-              On a pas encore trouvé de sponsor, mais ça pourrait être vous !
-            </span>
-          </div>
-        </Y2KWindow>
-          )}
+        {isLive && (
+          <Y2KWindow title={<span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Megaphone size={14} /> ESPACE PUBLICITAIRE</span>} className="h-48">
+            <div className="w-full h-full bg-y2k-border flex items-center justify-center border-2 border-dashed border-white/20">
+              <span className="font-pixel text-1xl opacity-20 rotate-12">
+                On a pas encore trouvé de sponsor, mais ça pourrait être vous !
+              </span>
+            </div>
+          </Y2KWindow>
+        )}
       </div>
 
       {/* Sidebar */}
       <div className="lg:col-span-4 space-y-6">
-        
-        {isLive && (
-      <Y2KWindow title={<span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><MessageCircle size={14} /> CHAT LIVE</span>} className="hidden lg:block">
-        <div className="aspect-[8/9] w-full">
-      <iframe
-        src={`https://www.twitch.tv/embed/wendohldkn/chat?parent=${parent}&darkpopout`}
-        id="chat_embed"
-         className="w-full h-full border-0"
-      /></div>
-    </Y2KWindow>
-          )}
-       <Y2KWindow
-  title={<span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Monitor size={14} /> INFO.SYS</span>}
-  headerClassName="bg-y2k-yellow text-black"
-  className="hidden lg:block"
->
-  <div className="space-y-4 font-mono text-sm">
 
-    <div className="flex justify-between border-b border-white/10 pb-2">
-      <span className="opacity-60">STATUS:</span>
-      <span className={`flex items-center gap-1.5 ${isLive ? "text-green-400" : "text-red-400"}`}>
         {isLive && (
-          <span className="inline-block w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+          <Y2KWindow title={<span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><MessageCircle size={14} /> CHAT LIVE</span>} className="hidden lg:block">
+            <div className="aspect-[8/9] w-full">
+              <iframe
+                src={`https://www.twitch.tv/embed/wendohldkn/chat?parent=${parent}&darkpopout`}
+                id="chat_embed"
+                className="w-full h-full border-0"
+              /></div>
+          </Y2KWindow>
         )}
-        {isLive ? "ONLINE" : "OFFLINE"}
-      </span>
+        <Y2KWindow
+          title={<span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Monitor size={14} /> INFO.SYS</span>}
+          headerClassName="bg-y2k-yellow text-black"
+          className="hidden lg:block"
+        >
+          <div className="space-y-4 font-mono text-sm">
+
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="opacity-60">STATUS:</span>
+              <span className={`flex items-center gap-1.5 ${isLive ? "text-green-400" : "text-red-400"}`}>
+                {isLive && (
+                  <span className="inline-block w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                )}
+                {isLive ? "ONLINE" : "OFFLINE"}
+              </span>
             </div>
             <div className="flex justify-between border-b border-white/10 pb-2">
               <span className="opacity-60">VERSION:</span>
@@ -223,41 +238,40 @@ export const Home = () => {
           </div>
         </Y2KWindow>
 
-        
+
         <Y2KWindow title={<span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><PlayCircle size={14} /> NOS ÉMISSIONS</span>}>
           <div
-            className={`space-y-3 max-h-[475px] overflow-y-auto -mr-2 pr-2 y2k-scrollbar ${
-              isFirefox ? "-mr-4 pr-3" : ""
-            }`}
+            className={`space-y-3 max-h-[475px] overflow-y-auto -mr-2 pr-2 y2k-scrollbar ${isFirefox ? "-mr-4 pr-3" : ""
+              }`}
           >
-          {SHOWS.map((show) => {
-  const Icon = CATEGORY_ICONS[show.title] || Circle;
-  return (
-    <Link
-      key={show.id}
-      to="/shows"
-      className="block p-2 border border-y2k-border hover:border-y2k-cyan hover:bg-y2k-border transition-all group"
-    >
-      <h4 className="text-y2k-cyan group-hover:text-y2k-green transition-colors flex items-center gap-1">
-        <Icon size={14} />
-        {show.title}
-      </h4>
-      <p className="text-xs opacity-60 line-clamp-1">{show.description}</p>
-    </Link>
-  );
-})}
+            {SHOWS.map((show) => {
+              const Icon = CATEGORY_ICONS[show.title] || Circle;
+              return (
+                <Link
+                  key={show.id}
+                  to="/shows"
+                  className="block p-2 border border-y2k-border hover:border-y2k-cyan hover:bg-y2k-border transition-all group"
+                >
+                  <h4 className="text-y2k-cyan group-hover:text-y2k-green transition-colors flex items-center gap-1">
+                    <Icon size={14} />
+                    {show.title}
+                  </h4>
+                  <p className="text-xs opacity-60 line-clamp-1">{show.description}</p>
+                </Link>
+              );
+            })}
           </div>
         </Y2KWindow>
- {!isLive && (
-        <Y2KWindow title={<span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Megaphone size={14} /> ESPACE PUBLICITAIRE</span>} className="h-48">
-          <div className="w-full h-full bg-y2k-border flex items-center justify-center border-2 border-dashed border-white/20">
-            <span className="font-pixel text-1xl opacity-20 rotate-12">
-              On a pas encore trouvé de sponsor, mais ça pourrait être vous !
-            </span>
-          </div>
-        </Y2KWindow>
-          )}
-        
+        {!isLive && (
+          <Y2KWindow title={<span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Megaphone size={14} /> ESPACE PUBLICITAIRE</span>} className="h-48">
+            <div className="w-full h-full bg-y2k-border flex items-center justify-center border-2 border-dashed border-white/20">
+              <span className="font-pixel text-1xl opacity-20 rotate-12">
+                On a pas encore trouvé de sponsor, mais ça pourrait être vous !
+              </span>
+            </div>
+          </Y2KWindow>
+        )}
+
       </div>
     </div>
   );
