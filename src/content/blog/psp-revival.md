@@ -3,12 +3,11 @@ title: Pourquoi la PSP est-elle redevenue cool ?
 date: 2025-02-08
 author: VincenTimes
 category: arka-TECH
+thumbnail: https://img.youtube.com/vi/EWIgJvGY6nE/maxresdefault.jpg
 excerpt: Console portable, baladeur, lecteur vidéo… La PSP savait tout faire. On explique pourquoi elle revient en force vingt ans après.
 ---
 
-[![arka-TECH – La PSP savait tout faire](https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:hizqbcljxczuerhrsgysy36x/bafkreiay3qtmuqkkvzawyhimiffnhufwjuwo45x6px6v4k76v376dpfime)](https://www.youtube.com/watch?v=EWIgJvGY6nE)
-
-> 🏷️ *Vidéo YouTube — en cliquant, vous quittez LUDOKINO.net.*
+[▶ Regarder sur YouTube](https://www.youtube.com/watch?v=EWIgJvGY6nE)
 
 ---
 
