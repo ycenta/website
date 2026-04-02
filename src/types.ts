@@ -21,6 +21,7 @@ export interface BlogPost {
   excerpt: string;
   content: string;
   category: string;
+  thumbnail?: string
 }
 
 export interface DownloadItem {

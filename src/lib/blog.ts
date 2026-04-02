@@ -6,6 +6,7 @@ type Frontmatter = {
   author: string;
   category: string;
   excerpt: string;
+  thumbnail?: string;
 };
 
 const postFiles = import.meta.glob('../content/blog/*.md', {
@@ -63,6 +64,7 @@ function parsePost(filePath: string, raw: string): BlogPost {
     author: meta.author ?? 'Ludokino',
     category: meta.category ?? 'News',
     excerpt: meta.excerpt ?? '',
+    thumbnail: meta.thumbnail,
     content,
   };
 }
