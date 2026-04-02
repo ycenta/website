@@ -19,6 +19,9 @@ export const Blog = () => {
 
   if (post) {
     const PostIcon = CATEGORY_ICONS[post.category] || Star;
+    const description =
+    post.excerpt ||
+    "Article sur LUDOKINO.net, portant sans doute sur les jeux vidéo, les animes, le tokusatsu, la musique ou culture geek.";
     return (
       <div className="max-w-4xl mx-auto space-y-6">
         <Helmet>

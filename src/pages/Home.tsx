@@ -7,6 +7,7 @@ import { Twitch, Youtube, Twitter, Instagram, ArrowRight, Monitor, PlayCircle, F
 import { siBluesky, siTiktok, siX } from "simple-icons";
 import { formatDate } from '../lib/utils';
 import { CATEGORY_ICONS } from '../lib/categoryIcons';
+import { Helmet } from "react-helmet-async";
 const isLive = false; // ← true pendant le live, false sinon
 const TWITCH_CHANNEL = "wendohldkn";
 const YOUTUBE_PLAYLIST = "PL13-SWMvlfiwijmK3dQ_rHY67bJj6rJ3P";
@@ -17,6 +18,16 @@ export const Home = () => {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <Helmet>
+        <title>LUDOKINO — Jeux vidéo, anime et culture geek</title>
+        <meta
+          name="description"
+          content="Jeux vidéo, anime, tokusatsu, musique et tech. LUDOKINO c'est le média des passionnés de culture geek et otaku — émissions, articles et goodies."
+        />
+        <link rel="canonical" href="https://ludokino.net" />
+        <meta property="og:url" content="https://ludokino.net" />
+        <meta name="twitter:url" content="https://ludokino.net" />
+      </Helmet>
       {/* Hero / Live Section */}
       <div className="lg:col-span-8 space-y-6">
      <Y2KWindow title={
