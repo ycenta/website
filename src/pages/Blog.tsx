@@ -26,7 +26,7 @@ export const Blog = () => {
       <div className="max-w-4xl mx-auto space-y-6">
         <Helmet>
           {/* Base */}
-          <title>{post.title} — LUDOKINO</title>
+          <title>{`${post.title} — LUDOKINO`}</title>
           <meta name="description" content={post.excerpt} />
           <meta name="author" content={post.author} />
           <link rel="canonical" href={`https://ludokino.net/blog/${post.id}`} />
