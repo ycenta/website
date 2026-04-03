@@ -37,6 +37,8 @@ export default function App() {
 const [bubbleKey, setBubbleKey] = useState(0);
 
 useEffect(() => {
+  (window as any).prerenderReady = true;
+
   const interval = setInterval(() => {
     setMessage(
       MASCOT_MESSAGES[Math.floor(Math.random() * MASCOT_MESSAGES.length)]
@@ -44,7 +46,8 @@ useEffect(() => {
     setBubbleKey(k => k + 1);
   }, 15000);
     return () => clearInterval(interval);
-  }, []);
+}, []);
+
 
   return (
     <HelmetProvider>

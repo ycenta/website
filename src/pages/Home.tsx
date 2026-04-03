@@ -15,7 +15,7 @@ const TWITCH_CHANNEL = "wendohldkn";
 const YOUTUBE_PLAYLIST = "PL13-SWMvlfiwijmK3dQ_rHY67bJj6rJ3P";
 const parent = typeof window !== 'undefined' ? window.location.hostname : 'ludokino.net';
 export const Home = () => {
-  const isFirefox = navigator.userAgent.toLowerCase().includes("firefox");
+  const isFirefox = typeof navigator !== 'undefined' && navigator.userAgent.toLowerCase().includes("firefox");
 
 
 
