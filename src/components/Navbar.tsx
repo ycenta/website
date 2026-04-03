@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '../lib/utils';
-import { 
-  Home, 
-  Tv, 
-  Info, 
-  Download, 
-  Newspaper, 
-  Youtube, 
-  Twitter, 
-  Instagram, 
+import {
+  Home,
+  Tv,
+  Info,
+  Download,
+  Newspaper,
+  Youtube,
+  Twitter,
+  Instagram,
   Twitch,
   ExternalLink
 } from 'lucide-react';
