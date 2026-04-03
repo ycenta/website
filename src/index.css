@@ -18,8 +18,7 @@
 @layer base {
   body {
     @apply bg-y2k-bg text-white font-sans selection:bg-y2k-yellow selection:text-y2k-bg;
-    background-color: #40518a; /* ou ta couleur dark principale */
-    background: url("/img/image.jpg") center/cover fixed;
+    background: url("/img/image.jpg") #40518a center/cover fixed;
     pointer-events: auto;
   }
 
