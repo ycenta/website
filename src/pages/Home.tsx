@@ -59,9 +59,9 @@ export const Home = () => {
               src={
                 isLive
                   ? `https://player.twitch.tv/?channel=${TWITCH_CHANNEL}&parent=${parent}&muted=true&autoplay=true`
-                  : `https://www.youtube-nocookie.com/embed/videoseries?list=${YOUTUBE_PLAYLIST}&autoplay=0&mute=1`
+                  : `https://www.youtube-nocookie.com/embed/videoseries?list=${YOUTUBE_PLAYLIST}&autoplay=1&mute=1`
               }
-              className="w-full h-full border-0"
+              className="w-full h-full border-0 rounded-lg"
               allowFullScreen
               title={isLive ? "Dernier Omnibus" : "Playlist Omnibus"}
             />
