@@ -14,14 +14,14 @@ export const Blog = () => {
   const post = id ? BLOG_POSTS.find(p => p.id === id) : null;
 
   if (id && !post) {
-       return <NotFound />;
+    return <NotFound />;
   }
 
   if (post) {
     const PostIcon = CATEGORY_ICONS[post.category] || Star;
     const description =
-    post.excerpt ||
-    "Article sur LUDOKINO.net, portant sans doute sur les jeux vidéo, les animes, le tokusatsu, la musique ou culture geek.";
+      post.excerpt ||
+      "Article sur LUDOKINO.net, portant sans doute sur les jeux vidéo, les animes, le tokusatsu, la musique ou culture geek.";
     return (
       <div className="max-w-4xl mx-auto space-y-6">
         <Helmet>
@@ -75,7 +75,7 @@ export const Blog = () => {
         }>
           <div className="p-4 md:p-8">
             <div className="mb-8 border-b border-y2k-border pb-6">
-              <span className="text-y2k-cyan font-mono">{formatDate(post.date)} | {post.category}</span>
+              <span className="font-mono">{formatDate(post.date)} | {post.category}</span>
               <h1 className="text-5xl text-y2k-green mt-2">{post.title}</h1>
               <span className="text-sm opacity-60">par {post.author}</span>
             </div>
@@ -122,7 +122,7 @@ export const Blog = () => {
   return (
     <div className="space-y-8">
       <div className="page-header">
-        <h1 className="text-5xl text-y2k-cyan">BLOG</h1>
+        <h1 className="text-5xl">BLOG</h1>
         <p className="text-xl opacity-80">
           Retrouvez nos articles, quelques informations et des coulisses sur la prod.
         </p>
@@ -132,27 +132,71 @@ export const Blog = () => {
         {BLOG_POSTS.map(post => {
           const PostIcon = CATEGORY_ICONS[post.category] || Star;
           return (
-            <Y2KWindow key={post.id} title={
-              <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                <PostIcon size={14} /> {post.category}
-              </span>
-            }>
-              <div className="space-y-4">
-                <Link to={`/blog/${post.id}`} className="block mb-4 rounded overflow-hidden">
-                  {post.thumbnail && (
-                    <img src={post.thumbnail} alt={post.title} style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover' }} />
-                  )}
-                </Link>
-                <span className="text-y2k-cyan font-mono">{formatDate(post.date)} — par {post.author}</span>
-                <Link to={`/blog/${post.id}`} className="block">
-                  <h2 className="text-2xl text-y2k-green">{post.title}</h2>
-                </Link>
-                <p className="opacity-80 line-clamp-3">{post.excerpt}</p>
-                <Link to={`/blog/${post.id}`} className="y2k-button block text-center">
-                  Lire l'article <ArrowRight size={16} className="inline-block ml-1" />
-                </Link>
-              </div>
-            </Y2KWindow>
+            <Y2KWindow
+  key={post.id}
+  title={
+    <span style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+      <PostIcon size={14} /> {post.category}
+    </span>
+  }
+>
+  <article className="blog-card">
+    <Link to={`/blog/${post.id}`} className="blog-card-thumb">
+      <span className="blog-card-badge">{formatDate(post.date)}</span>
+
+      {post.thumbnail ? (
+        <img
+          src={post.thumbnail}
+          alt={post.title}
+          className="blog-card-image"
+          width="640"
+          height="360"
+        />
+      ) : (
+        <div className="blog-card-placeholder" aria-hidden="true">
+          <div className="blog-card-placeholder-grid" />
+          <div className="blog-card-placeholder-inner">
+            <span className="blog-card-placeholder-kicker">LUDOKINO FANZINE</span>
+            <span className="blog-card-placeholder-title">
+              {post.category}
+            </span>
+            <span className="blog-card-placeholder-sub">
+              NO IMAGE / VISUEL EN COURS
+            </span>
+          </div>
+        </div>
+      )}
+    </Link>
+
+    <div className="blog-card-body">
+      <div className="blog-card-meta-row">
+        <Link
+  to={`/about#${post.authorSlug}`}
+  className="blog-card-meta blog-card-author-link"
+>
+  PAR {post.author}
+</Link>
+      </div>
+
+      <Link to={`/blog/${post.id}`} className="blog-card-title-link">
+        <h2 className="blog-card-title">{post.title}</h2>
+      </Link>
+
+      <p className="blog-card-excerpt line-clamp-3">
+        {post.excerpt}
+      </p>
+
+      <div className="blog-card-footer">
+  <Link
+    to={`/blog/${post.id}`}
+    className="y2k-button blog-card-cta inline-flex items-center justify-center"
+  >
+    Lire l'article <ArrowRight size={16} className="inline-block ml-1" />
+  </Link>
+</div>
+    </div>
+  </article>
+</Y2KWindow>
           );
         })}
       </div>

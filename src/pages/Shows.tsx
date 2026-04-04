@@ -3,7 +3,6 @@ import { Y2KWindow } from "../components/Y2KWindow";
 import { SHOWS } from "../constants";
 import { CATEGORY_ICONS } from '../lib/categoryIcons';
 import { PlayCircle, ArrowRight } from 'lucide-react';
-
 export const Shows = () => {
   return (
     <div className="space-y-8">
@@ -19,47 +18,69 @@ export const Shows = () => {
         {SHOWS.map((show) => {
           const Icon = CATEGORY_ICONS[show.title] || PlayCircle;
           return (
-            <Y2KWindow key={show.id} title={show.title}>
-              <div className="flex gap-6">
-                <div className="w-24 h-24 bg-y2k-border flex items-center justify-center shrink-0 border-2 border-y2k-border">
-                  <Icon size={48} className="text-y2k-cyan" />
+            <Y2KWindow key={show.id} title={show.title} className={show.tone ? `y2k-window-tone-${show.tone}` : undefined}>
+              <div className="show-card flex gap-5">
+                <div className="show-media-slot" aria-hidden="true">
+                  <Icon size={28} strokeWidth={1.8} />
                 </div>
-                <div className="space-y-4">
-                  <h2 className="text-3xl text-y2k-green">{show.title}</h2>
-                  <p className="text-lg opacity-90 leading-relaxed">
-                    {show.description}
-                  </p>
+                <div className={`show-card-content flex min-h-full flex-col show-tone-${show.id}`}>
+                  <h2 className="show-title">{show.title}</h2>
+                  <p className="show-description">{show.shortDescription ?? show.description}</p>
                   <a
                     href={show.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="y2k-button"
+                    className="y2k-button mt-4 self-start"
                   >
                     Voir les épisodes <ArrowRight size={16} className="inline-block ml-1" />
                   </a>
                 </div>
               </div>
             </Y2KWindow>
+
           );
         })}
       </div>
 
-      <Y2KWindow title="OMNIBUS : LA DÉFINITION" className="max-w-3xl mx-auto">
-        <div className="space-y-4 text-center p-8">
-          <h2 className="text-4xl text-y2k-yellow">QU'EST-CE QUE C'EST UN OMNIBUS ?</h2>
-          <p className="text-xl leading-relaxed">
-            C'est le format ultime de LUDOKINO. Chaque mois, nous mélangeons
-            toutes nos émissions, nos sketchs et nos intermittences funs pour
-            créer un montage final massif pouvant durer jusqu'à{" "}
-            <span className="text-y2k-green font-bold">2 HEURES*</span>.
+      <Y2KWindow
+        title="OMNIBUS : LA DÉFINITION"
+        className="max-w-3xl mx-auto"
+      >
+        <div className="omnibus-entry p-8">
+          <header className="omnibus-term-block">
+            <span className="omnibus-term">omnibus</span>
+            <span className="omnibus-phonetic">/ɔm.ni.bus/</span>
+            <span className="omnibus-label">nom masculin</span>
+          </header>
+
+          <p className="omnibus-definition">
+            <span className="omnibus-index">1.</span> Format vidéo mensuel de
+            LUDOKINO réunissant émissions, sketchs, rubriques et autres
+            intermittences douteuses dans un montage long, dense et généreusement
+            chaotique, pouvant atteindre
+            <span className="omnibus-duration"> 2&nbsp;HEURES*</span>.
           </p>
-          <p className="italic text-sm opacity-30">
-            *Pas tout le temps non plus, genre des fois c'est 2h30, d'autres fois c'est 1h45...
+
+          <p className="omnibus-editorial-note">
+            <span className="omnibus-note-label">Note de la rédaction :</span> contrairement
+            à une légende tenace entretenue par nous-mêmes, nous n’avons évidemment
+            rien inventé. L’idée a été élégamment subtilisée à Jean-Pat
+            <span className="omnibus-aside"> (Patrick Sarréa, sur Game One)</span>,
+            qui l’avait lui-même très probablement récupérée quelque part du côté de
+            la BBC. <br /><span className="omnibus-punchline">
+              Bref : une grande tradition de l’emprunt, habituel dans le milieu audiovisuel.
+            </span>
           </p>
-          <div className="flex justify-center gap-4 pt-4">
-            <div className="px-4 py-2 bg-y2k-border border border-white/20 text-xs font-mono">50 FPS</div>
-            <div className="px-4 py-2 bg-y2k-border border border-white/20 text-xs font-mono">1080P</div>
-            <div className="px-4 py-2 bg-y2k-border border border-white/20 text-xs font-mono">STEREO</div>
+
+          <p className="omnibus-footnote">
+            *La durée varie selon l’humeur, la fatigue, la quantité de trucs à monter
+            et notre rapport très relatif à la notion de concision.
+          </p>
+
+          <div className="omnibus-specs flex justify-center gap-4 pt-4">
+            <div className="omnibus-spec-pill">50 FPS</div>
+            <div className="omnibus-spec-pill">1080P</div>
+            <div className="omnibus-spec-pill">STÉRÉO</div>
           </div>
         </div>
       </Y2KWindow>

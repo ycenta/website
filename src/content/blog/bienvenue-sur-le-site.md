@@ -2,6 +2,7 @@
 title: Bienvenue sur le nouveau portail LUDOKINO
 date: 2026-03-19
 author: Teloru
+authorSlug: teloru
 category: NEWS
 excerpt: LUDOKINO a enfin un site web ! Fini la landing page, place à la vraie experience Y2K.
 thumbnail: /img/og-image.jpg

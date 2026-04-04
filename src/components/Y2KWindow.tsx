@@ -1,4 +1,5 @@
 import React from 'react';
+import { X } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 interface WindowProps {
@@ -9,19 +10,31 @@ interface WindowProps {
   onClose?: () => void;
 }
 
-export const Y2KWindow = ({ title, children, className, headerClassName, onClose }: WindowProps) => {
+export const Y2KWindow = ({
+  title,
+  children,
+  className,
+  headerClassName,
+  onClose,
+}: WindowProps) => {
   return (
     <div className={cn("y2k-window flex flex-col", className)}>
-      <div className={cn("y2k-window-header", headerClassName)}>
-        <span className="font-pixel text-lg uppercase tracking-wider truncate">{title}</span>
-        <div className="flex gap-1">
-          <div className="w-3 h-3 bg-y2k-border border border-white/20"></div>
-          <button 
-            onClick={onClose}
-            className="w-3 h-3 bg-red-500 border border-black hover:bg-red-400 transition-colors cursor-pointer" title="Fermer"
-          ></button>
-        </div>
+      <div className={cn("y2k-window-header flex items-center", headerClassName)}>
+        <span className="y2k-window-header-title truncate">
+          {title}
+        </span>
+
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Fermer la fenêtre"
+          title="Fermer"
+          className="window-close-button"
+        >
+          <X size={15} strokeWidth={2.5} className="relative z-10" aria-hidden="true" />
+        </button>
       </div>
+
       <div className="p-4 flex-1 overflow-auto">
         {children}
       </div>

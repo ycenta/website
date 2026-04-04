@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
@@ -11,7 +12,40 @@ import { NotFound } from "./pages/NotFound";
 import { ScrollToTopButton } from "./components/ScrollToTopButton";
 import { HelmetProvider } from "react-helmet-async";
 
+const MASCOT_MESSAGES = [
+  "Yo ! 👋",
+  "T'as vu le dernier Omnibus ?",
+  "LUDOKINO c'est la vie.",
+  "新しい動画を見てね！",
+  "On est en ligne 24/7 !",
+  "Clique sur BLOG 👆",
+  "ルドキノ forever~",
+  "CPU: 98%... normal.",
+  "Nouveau contenu dispo !",
+  "On arrive bientôt sur Patreon 🙏",
+  "Suivez-nous sur les réseaux sociaux !",
+  "On fait ça avec amour.",
+  "And... YOU.",
+  "Bon les broskis...",
+  "C'EST PAS RÉO ?!",
+];
+
 export default function App() {
+  const [message, setMessage] = useState(
+  () => MASCOT_MESSAGES[Math.floor(Math.random() * MASCOT_MESSAGES.length)]
+);
+const [bubbleKey, setBubbleKey] = useState(0);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setMessage(
+      MASCOT_MESSAGES[Math.floor(Math.random() * MASCOT_MESSAGES.length)]
+    );
+    setBubbleKey(k => k + 1);
+  }, 15000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <HelmetProvider>
       <Router>
@@ -20,7 +54,7 @@ export default function App() {
 
           <Navbar />
 
-          <main className="flex-1 container mx-auto px-4 py-8 relative z-20">
+          <main className="flex-1 w-full px-2 md:container md:mx-auto md:px-4 py-8 relative z-20">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/shows" element={<Shows />} />
@@ -33,8 +67,20 @@ export default function App() {
             </Routes>
           </main>
 
-          <ScrollToTopButton />
+          <div className="site-mascot-wrapper">
+            <div className="site-mascot-bubble" key={bubbleKey}>{message}</div>
+            <img
+              src="/img/KuroLDKN.png"
+              alt=""
+              className="site-mascot"
+              loading="lazy"
+              width={320}
+              height={420}
+            />
+            <span className="site-mascot-label">ルドキノ</span>
+          </div>
 
+          <ScrollToTopButton />
           <Footer />
         </div>
       </Router>
