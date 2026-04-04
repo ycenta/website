@@ -74,22 +74,26 @@ export const Navbar = () => {
           {/* Spacer gauche = même largeur que le bouton switch pour centrer le logo */}
           <div className="w-9 shrink-0" />
           <div className="flex-1 flex justify-center">
-            <img
-              src={`${import.meta.env.BASE_URL}img/LDKN.svg`}
-              alt="LUDOKINO Logo"
-              className="h-10 dark:invert"
-            />
+            <Link to="/" aria-label="Accueil">
+              <img
+                src={`${import.meta.env.BASE_URL}img/LDKN.svg`}
+                alt="LUDOKINO Logo"
+                className="h-10 dark:invert"
+              />
+            </Link>
           </div>
           <ThemeToggle />
         </div>
 
         {/* ── Bloc logo : desktop uniquement (lg+) ── */}
         <div className="navbar-row hidden lg:flex items-center border-r border-black/15 dark:border-white/10 px-4 py-1 shrink-0">
-          <img
-            src={`${import.meta.env.BASE_URL}img/LDKN.svg`}
-            alt="LUDOKINO Logo"
-            className="h-10 dark:invert"
-          />
+          <Link to="/" aria-label="Accueil">
+            <img
+              src={`${import.meta.env.BASE_URL}img/LDKN.svg`}
+              alt="LUDOKINO Logo"
+              className="h-10 dark:invert"
+            />
+          </Link>
         </div>
 
         {/* ── Rangée nav items + socials (toutes tailles) ── */}

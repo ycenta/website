@@ -23,7 +23,6 @@
   html {
     margin: 0;
     padding: 0;
-    background-color: #2a3454;
   }
 
   :root {
@@ -363,7 +362,12 @@ html.dark .home-article-excerpt {
   }
 
 
-  /* Couleur de fond pour la zone d'overscroll iOS */
+  /* ── Background principal : fixed sur html = ne zoome jamais ── */
+  html {
+    background: url("/img/image.jpg") center / cover fixed #2a3454;
+  }
+
+  /* Couleur d'overscroll iOS selon le thème */
   html.dark {
     background-color: #2a3454;
   }
@@ -377,32 +381,8 @@ html.dark .home-article-excerpt {
     margin: 0;
     padding: 0;
     pointer-events: auto;
-    background: url("/img/image.jpg") center / cover no-repeat;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-
+    background: transparent;
   }
-
-  body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-html.dark body::before {
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-html:not(.dark) body::before {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-
 
   html.dark body {
     @apply text-white selection:bg-y2k-yellow selection:text-y2k-bg;
@@ -2228,4 +2208,35 @@ html.dark .site-footer {
       rgba(73, 88, 140, 0.88) 0%,
       rgba(47, 57, 98, 0.94) 22%,
       rgba(26, 30, 56, 0.98) 100%);
+}
+/* ── Mobile : évite les bugs iOS avec position:fixed sur le background ── */
+@media (max-width: 768px) {
+  /* Sur mobile, background-attachment: fixed est buggé sur iOS → on le met sur body en scroll */
+  html {
+    background: none;
+  }
+
+  /* Dark mode */
+  html.dark body {
+    background: url("/img/image.jpg") center / cover no-repeat #2a3454;
+    background-attachment: scroll;
+  }
+
+  html.dark body::before {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* Light mode */
+  html:not(.dark) body {
+    background: url("/img/image.jpg") center / cover no-repeat #f7c92f;
+    background-attachment: scroll;
+  }
+
+  html:not(.dark) body::before {
+    background: transparent;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
 }

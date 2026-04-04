@@ -13,7 +13,7 @@ const SECONDARY_POSTS = BLOG_POSTS.slice(1, 3);
 const isLive = false; // ← true pendant le live, false sinon
 const TWITCH_CHANNEL = "wendohldkn";
 const YOUTUBE_PLAYLIST = "PL13-SWMvlfiwijmK3dQ_rHY67bJj6rJ3P";
-const parent = window.location.hostname; typeof window !== 'undefined' ? window.location.hostname : 'ludokino.net';
+const parent = typeof window !== 'undefined' ? window.location.hostname : 'ludokino.net';
 export const Home = () => {
   const isFirefox = navigator.userAgent.toLowerCase().includes("firefox");
 
