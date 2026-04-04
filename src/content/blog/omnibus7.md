@@ -1,7 +1,8 @@
 ---
-title: QUI FÊTE ENCORE LE 1ER AVRIL ? – OMNIBUS #7
+title: Qui fête encore le 1er avril ? – OMNIBUS #7
 date: 2026-04-01
 author: VincenTimes
+authorSlug: vincentimes
 category: OMNIBUS
 thumbnail: https://img.youtube.com/vi/C6OTtnyglyQ/maxresdefault.jpg
 excerpt: 1h30 de LUDOKINO pour fêter le 1er avril comme il se doit. On ne vous dira pas tout.

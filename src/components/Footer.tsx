@@ -6,7 +6,6 @@ export const Footer = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Varie entre 45% et 98%
       const newCpu = Math.floor(Math.random() * 54) + 45;
       setCpu(newCpu);
     }, 2000);
@@ -15,15 +14,16 @@ export const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-y2k-window border-t-2 border-y2k-border p-4 text-center z-20">
-      <div className="flex justify-center gap-8 mb-4">
-        <span className="text-[10px] font-mono opacity-40">CPU: {cpu}%</span>
-        <span className="text-[10px] font-mono opacity-40">RAM: 512MB</span>
-        <span className="text-[10px] font-mono opacity-40">
-          OS: LUDOKINO_OS v1.0
+<footer className="site-footer text-y2k-bg dark:text-y2k-yellow p-4 text-center z-20">
+  <div className="flex justify-center gap-8 mb-4">
+        <span className="text-[10px] font-mono opacity-50">CPU: {cpu}%</span>
+        <span className="text-[10px] font-mono opacity-50">RAM: 512MB</span>
+        <span className="text-[10px] font-mono opacity-50">
+          OS: LUDOKINO_OS v1.2
         </span>
       </div>
-      <p className="font-pixel text-sm opacity-60 flex items-center justify-center gap-2 flex-wrap">
+
+      <p className="font-mono text-xs opacity-70 flex items-center justify-center gap-2 flex-wrap">
         <span>&copy; 2026 LUDOKINO - TOUS DROITS RÉSERVÉS</span>
         <span className="opacity-40">|</span>
         <Link

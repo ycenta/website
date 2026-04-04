@@ -21,6 +21,7 @@ export const CATEGORY_ICONS: Record<string, LucideIcon> = {
 
   'In Paris':                 Sandwich,
   'Merguez In Paris':         Sandwich,
+  'merguez in paris':         Sandwich,
 
   'Absolute LUDOKINO':        Star,
   'ABSOLUTE LUDOKINO':        Star,

@@ -4,6 +4,7 @@ type Frontmatter = {
   title: string;
   date: string;
   author: string;
+  authorSlug: string;
   category: string;
   excerpt: string;
   thumbnail?: string;
@@ -62,6 +63,7 @@ function parsePost(filePath: string, raw: string): BlogPost {
     title: meta.title ?? id,
     date: meta.date ?? '1970-01-01',
     author: meta.author ?? 'Ludokino',
+    authorSlug: meta.authorSlug ?? 'ludokino',
     category: meta.category ?? 'News',
     excerpt: meta.excerpt ?? '',
     thumbnail: meta.thumbnail,

@@ -2,6 +2,7 @@
 title: Pourquoi la PSP est-elle redevenue cool ?
 date: 2025-02-08
 author: VincenTimes
+authorSlug: vincentimes
 category: arka-TECH
 thumbnail: https://img.youtube.com/vi/EWIgJvGY6nE/maxresdefault.jpg
 excerpt: Console portable, baladeur, lecteur vidéo… La PSP savait tout faire. On explique pourquoi elle revient en force vingt ans après.
