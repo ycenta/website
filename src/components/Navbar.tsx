@@ -8,18 +8,14 @@ import {
   Download,
   Newspaper,
   Youtube,
-  Twitter,
-  Instagram,
   Twitch,
-  ExternalLink
+  Volume2,
+  VolumeX,
 } from 'lucide-react';
-import {
-  siBluesky, siTiktok, siX
-}
-  from "simple-icons";
-
-  import { Sun, Moon } from "lucide-react";
+import { siBluesky } from "simple-icons";
+import { Sun, Moon } from "lucide-react";
 import { useTheme } from "./ThemeContext";
+import { useSound } from "./SoundContext";
 
 const ThemeToggle = ({ className = "" }: { className?: string }) => {
   const { theme, toggleTheme } = useTheme();
@@ -31,6 +27,24 @@ const ThemeToggle = ({ className = "" }: { className?: string }) => {
       className={cn("navbar-icon-button w-9 h-9 lg:w-11 lg:h-11", className)}
     >
       {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+    </button>
+  );
+};
+
+// Desktop only — caché sur mobile via hidden lg:flex du parent
+const MuteToggle = () => {
+  const { muted, toggleMute } = useSound();
+  return (
+    <button
+      onClick={toggleMute}
+      aria-label={muted ? "Activer le son" : "Couper le son"}
+      title={muted ? "Activer le son" : "Couper le son"}
+      className={cn(
+        "navbar-icon-button w-9 h-9 lg:w-11 lg:h-11",
+        muted && "opacity-50"
+      )}
+    >
+      {muted ? <VolumeX size={20} /> : <Volume2 size={20} />}
     </button>
   );
 };
@@ -69,9 +83,7 @@ export const Navbar = () => {
       <div className="flex flex-col lg:flex-row lg:items-stretch">
 
         {/* ── Rangée logo : mobile + tablette (< lg) ── */}
-        {/* Logo centré, switch à droite, pas de socials */}
         <div className="navbar-row flex lg:hidden items-center px-3 py-2 border-b border-black/15 dark:border-white/10">
-          {/* Spacer gauche = même largeur que le bouton switch pour centrer le logo */}
           <div className="w-9 shrink-0" />
           <div className="flex-1 flex justify-center">
             <Link to="/" aria-label="Accueil">
@@ -96,7 +108,7 @@ export const Navbar = () => {
           </Link>
         </div>
 
-        {/* ── Rangée nav items + socials (toutes tailles) ── */}
+        {/* ── Rangée nav items + socials ── */}
         <div className="navbar-row flex items-center min-w-0 flex-1">
           <div className="flex flex-1 min-w-0 overflow-x-auto no-scrollbar lg:overflow-visible">
             <NavItem to="/" icon={Home}>Accueil</NavItem>
@@ -106,7 +118,7 @@ export const Navbar = () => {
             <NavItem to="/about" icon={Info}>{"À\u00A0propos"}</NavItem>
           </div>
 
-          {/* Socials + switch : desktop uniquement (lg+) */}
+          {/* Socials + toggles : desktop uniquement */}
           <div className="hidden lg:flex items-center gap-1 px-2 shrink-0">
             <a href="https://bsky.app/profile/ludokino.net" title="Bluesky" target="_blank" rel="noreferrer" className="navbar-icon-button">
               <svg width={20} height={20} viewBox="0 0 24 24" fill="currentColor">
@@ -119,6 +131,7 @@ export const Navbar = () => {
             <a href="https://www.youtube.com/@LDKino" title="YouTube" target="_blank" rel="noreferrer" className="navbar-icon-button">
               <Youtube size={20} />
             </a>
+            <MuteToggle />
             <ThemeToggle />
           </div>
         </div>

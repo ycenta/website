@@ -1394,8 +1394,17 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  pointer-events: none;
+  pointer-events: auto;
   user-select: none;
+  touch-action: none;
+}
+
+.site-mascot-wrapper:hover {
+  cursor: grab;
+}
+
+.site-mascot-wrapper:active {
+  cursor: grabbing;
 }
 
 .site-mascot {
@@ -2239,4 +2248,12 @@ html.dark .site-footer {
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
   }
+}
+/* Barre de lecture */
+html.dark {
+  --progress-bar-color: #f7c92f;
+}
+
+html:not(.dark) {
+  --progress-bar-color: #24305c;
 }
