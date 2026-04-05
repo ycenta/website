@@ -67,7 +67,7 @@ export const Blog = () => {
             }
           })}</script>
         </Helmet>
-        <Link to="/blog" className="y2k-link mb-4 inline-block page-header text-left">← Retour aux articles</Link>
+        <Link to="/blog" className="y2k-button mb-4 inline-flex items-center gap-1">← Retour aux articles</Link>
         <Y2KWindow title={
           <span style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <PostIcon size={14} /> {post.title}
