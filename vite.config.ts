@@ -69,6 +69,9 @@ function ogMetadataPlugin(): Plugin {
       }
 
       fs.writeFileSync(path.join('dist', 'og-metadata.json'), JSON.stringify(routes, null, 2));
+      // Écrire aussi dans netlify/edge-functions/ pour l'import statique de l'edge function
+      fs.mkdirSync(path.join('netlify', 'edge-functions'), { recursive: true });
+      fs.writeFileSync(path.join('netlify', 'edge-functions', 'og-metadata.json'), JSON.stringify(routes, null, 2));
       console.log('✅ og-metadata.json generated');
     },
   };

@@ -13,7 +13,7 @@ import type { Context } from "https://edge.netlify.com";
 // Bots non reconnus par l'extension Netlify Prerender
 const EXTRA_BOT_PATTERNS = [
   /cardyb/i,         // Bluesky
-  /whatsapp/i,       // WhatsApp
+  /whatsapp/i,       // WhatsApp -> En theorie devrait être géré comme MetaBot mais autant être safe
   /telegrambot/i,    // Telegram
   /slackbot/i,       // Slack
   /signal/i,         // Signal
