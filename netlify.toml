@@ -4,9 +4,3 @@
 
 [build.environment]
   NODE_VERSION = "20"
-
-# Edge Function pour injecter les OG tags dynamiques
-# pour les bots non couverts par l'extension Prerender (ex: Bluesky Cardyb)
-[[edge_functions]]
-  path = "/*"
-  function = "og-inject"
